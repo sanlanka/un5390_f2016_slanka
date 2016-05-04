@@ -1,0 +1,33 @@
+
+  slanka
+  -----------------------------------------------------------
+                               Max%  MaxScore  Score      %
+  -----------------------------------------------------------
+  -----------------------------------------------------------
+    Current score and grade   :       0% (F)
+    Remaining earnable score  :     100%
+    Potential score and grade :     100% (A)
+  -----------------------------------------------------------
+
+  Final grade = 50% Assignments + 
+                20% Active Participation +
+                 5% Project Status Reports +
+                25% Project Work
+
+  A  (4.00): 93% and above       AB (3.50): 88% - 92.99%  
+  B  (3.00): 82% - 87.99%        BC (2.50): 76% - 81.99%   
+  C  (2.00): 70% - 75.99%        CD (1.50): 65% - 69.99%
+  D  (1.00): 60% - 64.99%        F  (0.00): 59.99% and below
+
+  Active Participation
+    Library Instruction (Week #02; 5%)
+    Business Cards (Week #06; 5%)
+    Lead The Solution Process (Once per semester; selected randomly; 5%)
+    Professional Twitter Profile (5%)
+
+  Project Status Reports
+    Weeks 10 through 14 (1% each)
+
+  Project Work
+    Advisor's Note (Finals week; 25%)
+
