@@ -14,7 +14,7 @@ Cross-listed as BE5390, EE5390 and MA5395
 
       There is no due date by which these need to be completed. However, 
       doing so before the beginning of Fall instruction will help you get
-      bootstrapped (i.e., lacing up the shoes before beginning the journey), 
+      bootstrapped (i.e., *lacing up the shoes before beginning the journey*), 
       and in turn, make a better use of time and opportunities.
 
   02. Replace ```john``` with your ISO username, and
