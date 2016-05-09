@@ -1,6 +1,6 @@
 # UN5390: Scientific Computing I         
 
-Fall 2015             
+Fall 2016             
 Michigan Technological University        
 Cross-listed as BE5390, EE5390 and MA5390
 
