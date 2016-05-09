@@ -8,9 +8,8 @@ Cross-listed as BE5390, EE5390 and MA5395
 ## Training Camp
 
   01. Follow the numerical sequence of training camps, and the sequence of
-      problems/tasks therein. Each problem usually tends to build upon results 
-      (from a previous problem). Each training camp should take 2-3 hours to 
-      complete.
+      tasks therein. Each task usually tends to build upon results (from a 
+      previous task). Each training camp should take 2-3 hours to complete.
 
       There is no due date by which these need to be completed. However, doing 
       so before the beginning of Fall instruction will help you get
