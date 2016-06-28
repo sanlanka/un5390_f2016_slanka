@@ -1,0 +1,50 @@
+% Document type with options
+\documentclass[fleqn,letterpaper,12pt]{report}
+
+% Required packages and settings (DO NOT UPDATE THIS)
+\usepackage{UN5390}
+\input{CourseSettings}
+
+% Assignment-specific setting (UPDATE THIS WHEN NECESSARY)
+\week{01}
+
+% Document begins
+\begin{document}
+
+% Title (DO NOT UPDATE THIS)
+\assignmenttitle
+
+%
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 1}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 1
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 2}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 2
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 3
+
+\vfill
+and so on.
+
+\newpage
+% References
+% http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\section*{References}
+\bibliographystyle{unsrt}
+\bibliography{sgowtham,john} % REPLACE john WITH YOUR MICHIGAN TECH ISO USERNAME
+
+% Document ends
+\end{document}
