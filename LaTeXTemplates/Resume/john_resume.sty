@@ -1,14 +1,12 @@
-\usepackage{amsfonts,amsmath,amssymb,graphicx}  % Fonts related
-\usepackage{graphicx,epsfig,rotate}             % Graphics related
-\usepackage[usenames]{color}                    % Accessing colors by names
-\usepackage[super,comma]{natbib}                % Bibliography related
-\usepackage[sectionbib]{chapterbib}             % Bibliography related
+% Packages
+\usepackage{amsfonts,amsmath,amssymb,graphicx}
+\usepackage{graphicx,epsfig,rotate}
+\usepackage[usenames]{color}
+\usepackage[super,comma]{natbib}
+\usepackage[sectionbib]{chapterbib}
 \usepackage{fancyhdr,multicol}
 \usepackage{lastpage}
-% \usepackage{doi}
-\usepackage{enumerate,setspace,url,hyperref}    % Other misc. useful packages
-
-% \renewcommand*{\doi}[1]{\href{http://dx.doi.org/#1}{doi: #1}}
+\usepackage{enumerate,setspace,url,hyperref}
 
 % Page format 
 \setlength{\oddsidemargin}{0.00in}  % Left side margin
@@ -25,16 +23,8 @@
 \pagestyle{fancy}
 
 % Declaring graphics paths and extensions
-\graphicspath{{.}{./graphs/}{./images/}} 
-\DeclareGraphicsExtensions{.eps,.ps,.jpg,.gif,.eps.gz,.ps.gz}
-
-\usepackage{calligra}
-\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
-% \DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
- 
-% A new, shorthand command/macro to generate 'script r'
-\newcommand{\scriptr}[1]{\ensuremath{\mathcalligra{#1}}}
-
+\graphicspath{{.}{./images/}} 
+\DeclareGraphicsExtensions{.eps,.eps.gz,.ps,.ps.gz,.jpg,.pdf,.png,.gif}
 
 % Redefining some commands to meet the requirements
 \renewcommand{\baselinestretch}{1.10}
@@ -48,7 +38,6 @@
 \fancyhead[R]{\small Page \thepage/\pageref{LastPage}}
 \fancyfoot[C]{\small Michigan Technological University}
 
-%
 % Remove [] around numbers in bibliography
 \makeatletter
 \renewcommand\@biblabel[1]{#1.}
