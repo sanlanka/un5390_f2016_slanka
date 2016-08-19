@@ -68,10 +68,10 @@ Michigan Technological University
      It is expected that you will work on the assignment consistently from
      the day it's handed out. If you have any questions, concerns and/or
      need further information, you must get in touch with the instructor at
-     least 48 hours before it's due. Use an method [in person (on/off
-     campus), email (with ```UN5390:``` or ```BE5390:``` or
+     least 48 hours before it's due. Use a method that works best for you --
+     in person (on/off campus), email (with ```UN5390:``` or ```BE5390:``` or
      ```EE5390:``` or ```MA5390:``` in the subject field), phone call,
-     etc.] that works for you to do so.
+     etc.
 
      Assignments and project reports must be typeset in LaTeX using the
      provided template. Microsoft Word, Notepad, handwritten notes, etc. will 
