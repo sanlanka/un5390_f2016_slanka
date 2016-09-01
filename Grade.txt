@@ -1,33 +1,52 @@
 
-  slanka
-  -----------------------------------------------------------
-                               Max%  MaxScore  Score      %
-  -----------------------------------------------------------
-  -----------------------------------------------------------
-    Current score and grade   :       0% (F)
-    Remaining earnable score  :     100%
-    Potential score and grade :     100% (A)
-  -----------------------------------------------------------
+  slanka (Updated: Thu Sep  1 10:30:11 EDT 2016)
+
+  -------------------------------------------------------------------
+                                    MaxPct  MaxScore  Score     Pct
+  -------------------------------------------------------------------
+    Assignment 01                       05         -      -    0.00
+    Assignment 04                       10         -      -    0.00
+    Assignment 06                       15         -      -    0.00
+    Assignment 09                       20         -      -    0.00
+    AP: Attendance 01                 0.50         -      -    0.50
+    AP: Attendance 02                 0.50         -      -    0.00
+    AP: Attendance 04                 0.50         -      -    0.00
+    AP: Attendance 05                 0.50         -      -    0.00
+    AP: Attendance 06                 0.50         -      -    0.00
+    AP: Attendance 07                 0.50         -      -    0.00
+    AP: Attendance 08                 0.50         -      -    0.00
+    AP: Attendance 10                 0.50         -      -    0.00
+    AP: Attendance 11                 0.50         -      -    0.00
+    AP: Attendance 13                 0.50         -      -    0.00
+    AP: Attendance 14                 0.50         -      -    0.00
+    AP: Attendance FW                 0.50         -      -    0.00
+    AP: Research marketing I            02         -      -    0.00
+    AP: Research marketing II           02         -      -    0.00
+    AP: Research marketing III          02         -      -    0.00
+    AP: PB&J sandwich recipe            02         -      -    0.00
+    AP: Problem-solving skills          02         -      -    0.00
+    AP: Doing a little more             09         -      -    0.00
+    Project Status Report 10            01         -      -    0.00
+    Project Status Report 11            01         -      -    0.00
+    Project Status Report 12            01         -      -    0.00
+    Project Status Report 13            01         -      -    0.00
+    Project Status Report 14            01         -      -    0.00
+    Project Work                        20         -      -    0.00
+  -------------------------------------------------------------------
+    Grand total                     100.00         -      -    0.50
+  -------------------------------------------------------------------
+
+  Current score and grade   :    0.50% (F)
+  Remaining earnable score  :   99.50%
+  Potential score and grade :  100.00% (A)
 
   Final grade = 50% Assignments + 
-                20% Active Participation +
+                25% Active Participation +
                  5% Project Status Reports +
-                25% Project Work
+                20% Project Work
 
   A  (4.00): 93% and above       AB (3.50): 88% - 92.99%  
   B  (3.00): 82% - 87.99%        BC (2.50): 76% - 81.99%   
   C  (2.00): 70% - 75.99%        CD (1.50): 65% - 69.99%
   D  (1.00): 60% - 64.99%        F  (0.00): 59.99% and below
-
-  Active Participation
-    Library Instruction (Week #02; 5%)
-    Business Cards (Week #06; 5%)
-    Lead The Solution Process (Once per semester; selected randomly; 5%)
-    Professional Twitter Profile (5%)
-
-  Project Status Reports
-    Weeks 10 through 14 (1% each)
-
-  Project Work
-    Advisor's Note (Finals week; 25%)
 
