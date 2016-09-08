@@ -87,6 +87,11 @@ Thumbs.db
 *.tdo
 
 #
+# Clion IDE related files
+.idea
+.xml
+
+#
 # Misc
 *.mp3
 *.mp4

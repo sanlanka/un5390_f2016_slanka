@@ -1,5 +1,5 @@
 
-  slanka (Updated: Tue Sep  6 15:05:35 EDT 2016)
+  slanka (Updated: Thu Sep  8 16:12:33 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
@@ -9,7 +9,7 @@
     Assignment 06                       15         -      -    0.00
     Assignment 09                       20         -      -    0.00
     AP: Attendance 01                 0.50         -      -    0.50
-    AP: Attendance 02                 0.50         -      -    0.00
+    AP: Attendance 02                 0.50         -      -    0.50
     AP: Attendance 04                 0.50         -      -    0.00
     AP: Attendance 05                 0.50         -      -    0.00
     AP: Attendance 06                 0.50         -      -    0.00
@@ -20,7 +20,7 @@
     AP: Attendance 13                 0.50         -      -    0.00
     AP: Attendance 14                 0.50         -      -    0.00
     AP: Attendance FW                 0.50         -      -    0.00
-    AP: Research marketing I            02         -      -    0.00
+    AP: Research marketing I            02         -      -    2.00
     AP: Research marketing II           02         -      -    0.00
     AP: Research marketing III          02         -      -    0.00
     AP: PB&J sandwich recipe            02         -      -    0.00
@@ -33,11 +33,11 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -    0.50
+    Grand total                     100.00         -      -    3.00
   -------------------------------------------------------------------
 
-  Current score and grade   :    0.50% (F)
-  Remaining earnable score  :   99.50%
+  Current score and grade   :    3.00% (F)
+  Remaining earnable score  :   97.00%
   Potential score and grade :  100.00% (A)
 
   Final grade = 50% Assignments + 
