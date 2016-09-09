@@ -110,11 +110,179 @@ Anticipated to be in the calendar year of 2018 \newline
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 3}
 \problem
-TYPESET YOUR SOLUTION FOR PROBLEM 4
+MATLAB is short for Matrix Laboratory developed by MathWorks.  It is a multi-paradigm computing environment. It supports both Imperative and Object Oriented Programming. It was first developed by Cleve Moler , the then chairman of Computer Science at the University of New Mexico. Later was commercialised by Jack Little and Steve Bangert along with Cleve Moler founding MathWorks. 
+
+Basics:\newline
+The default screen when MATLAB is started consists of three panels:
+Current Folder — Access your files. 
+Command WIndow — Enter commands at the command line, indicated by the prompt (/>/>).,
+Workspace— Explore data that you create or import from files
+
+Keywords:\newline
+To verify is a word is a keyword in MATLAB, we can use “iskeyword” function.\newline
+These are the list of most common MATLAB keywords:\newline
+	'break'\newline
+    'case'\newline
+    'catch'\newline
+    'classdef'\newline
+    'continue'\newline
+    'else'\newline
+    'elseif'\newline
+    'end'\newline
+    'for'\newline
+    'function'\newline
+    'global'\newline
+    'if'\newline
+    'otherwise'\newline
+    'parfor'\newline
+    'persistent'\newline
+    'return'\newline
+    'spmd'\newline
+    'switch'\newline
+    'try'\newline
+    'while'
+	
+Variables\newline
+There are several different data types in MATLAB . We do not have to specify the data type when declaring a variable in MATLAB. 
+The different data types are listed below:\newline
+1.Floating Point Numbers: \newline
+Class: Single, Double\newline
+Floating Point Number is the default data type in MATLAB. They are used to store real numbers. e.g. F = 1.89938532. \newline
+2.Integers: Integers are of the following classes in MATLAB.  
+Class: uint8, int8, uint16, int16, uint32, int32, uint64 and int64.\newline
+This data type is more memory efficient and allows for storage of whole numbers. "u" stands for unsigned integers while "8,16,32,64" stand for the number of bits for storage. e.g. C = uint16(256) \newline
+3. Characters and Strings:Used to store text. \newline
+Class: char \newline
+A string is an array of characters while char signifies each one. e.g. c = “Hello” \newline
+4.Boolean: \newline
+class: logical \newline
+Used to Store true(1) or false(0) \newline
+5.Structures: \newline
+Class: Struct \newline
+Used to Store varying lengths of Data types. the data types are accessed using an index.
+
+Matlab is an interpreted language meaning it is dynamically compiled. It allows numerical calculations and the Visualisation of the results associated with it.
+
+The programming environment is called Command Window and the variables associated with the program are stored in the Workspace. These variables can be checked out by the command ‘who’
+‘clc’ clears out the Output of the command window. ‘clear’ clears out all the variables stored in the workspace.
+
+The key thing about MATLAB is that all data in variables are realised as double precision array. Hence the name, Matrix Laboratory.
+
+Files:\newline
+MATLAB stores data to *.mat files by default in the default path.”save” enables one to save the files.\newline
+uisave - includes user interface.\newline
+hgsave -saves figures to files *.fig by default
+diary[filename]- All text input in the command window to a text file. This is equivalent to directing a output to a file in linux shells.
+
+Files can be loaded by using the “”load [filename.ext]”” in MATLAB. 
+There are functions that enable generic import of data.
+import data examines the extension and loads the data depending on the extension.\newline
+'uiimport' opens a window to examine data
+
+Functions:\newline
+MATLAB supports anonymous function creation from the command line.\newline
+General functions can also be written in MATLAB with the use of the keyword “"function"”
+\newpage
+Complex Numbers:\newline
+MATLAB supports complex numbers and also supports visualisation of complex functions. a complex number can be declared as:\newline
+comp = 1+1i;
+
+Arrays:\newline
+Arrays are indexed using Integers. The first Array Element is indexed with a '1' instead of a '0' contrary to most programming languages maybe because MATLAB was developed using FORTRAN and FORTRAN used this convention.
+
+Visualisations:\cite{MATLAB}\newline
+MATLAB supports visualisations in 2D and 3D.\newline
+The most common visualisations are:\newline
+1.Plot : Renders a 2D line in Cartesian Coordinate System. e.g. plot(x,fx)\newline
+2.Polar Plot: Renders a plot using θ and r(θ). e.g.\newline polar(t,sin(2*t))\newline
+3.3D Plot: plot3(l,f,d);grid on;\newline
+4. Contours: Enables visualisation of vectors. e.g. contour(x,y,x)
+5.Mesh: Creates 3d lot using Vectors x and y and a matrix z that have the same number of elements. e.g mesh(x,y,z). MATLAB also supports annotations of the visualisations.
+
+Scripts:\newline
+There are two types of m-files:\newline
+scripts and Functions:\newline
+The key difference being that general scripts run using present variables in the workspace. Functions on the other hand wholly contain themselves.They possess their own workspace keeping workspaces separate from the current workspace. also limiting the scope of the variables.
+
+Control Flow:\newline
+MATLAB’s control statements are similar to the control statements in most languages. There are the \newline
+1. if and elseif statements.\newline
+e.g\newline
+if expression\newline
+	statements\newline
+else if expression2\newline
+	statements\newline
+end
+
+2. The common switch statement:
+switch variable\newline
+case variable1:\newline
+	statements\newline
+case variable2:\newline
+	statements\newline
+end
+
+3. There is also a provision for exceptions
+e.g\newline
+try \newline
+	statements\newline
+catch\newline
+	statements\newline
+end
+
+4. The FOR loop and the WHILE LOOP and BREAK, CONTINUE and RETURN statements.
+
+Built in Mathematical Functions:\newline
+MATLAB gives many built in functions to solve everyday numerical problems. Since Matlab realises all data as matrices, the data is processed using most common matrices operations such as Transpose and built in functions to solve higher order differential equations both ordinary and partial.
+
+Git Support:\newline
+MATLAB also supports Git Source control. 
+
+I/O Operations:\newline
+MATLAB also supports many I/O operations such as reading and writing from files. Socket programming and writing to a USB port.
+The process for reading from or writing to  file is similar to other programming languages
+/>/>fid = fopen(‘myfile.txt’,’r) %  open file to read/write or both
+/>/>spec = fscanf(“Hello”) %scanf file for Hello and manipulate as required.
+/>/>fclose(fid) %closes file with id
+
+OOP/’s\newline
+Like discussed in the beginning, MATLAB supports multiple programming paradigms. Although MATLAB supports object oriented programming, technically MATLAB is not a fully Object Oriented Programming Language.
+It supports Polymorphism, Inheritance and Encapsulation.
+
+Toolboxes:\newline
+The most important thing about MATLAB is that MATLAB offers various toolboxes such as the Image processing Toolbox, the Signal Processing toolbox, Optimisation toolbox etc. It also supports parallel programming and algorithms that can be run on supported hardware.
 
 \vfill
-and so on.
 
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+This famous Approximation of Pi is one of the findings by the popular Indian Mathematician Srinivasa Ramanujan which computes a further eight decimal places of Pi with each summation term in the series. These approximations later lead to Ramanujan-Sato series where these converging series for approximating Pi are generalised.\newline
+The MATLAB Program file for calculating the error in this approximation is in the file "pi\_sr.m" in the folder "un5390\_f2016\_slanka/CourseWork/Week\_01/slanka\_01"\cite{Pi} 
+
+
+\vfill
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+The bash shell script for the Conversion of seconds into Human readable 
+Hours:Minutes:Seconds format is in the file "seconds2hms.sh" in the directory "un5390\_f2016\_slanka/CourseWork/Week\_01/slanka\_01" of the MichiganTech Repository.\cite{tc}
+\vfill
+\newpage
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+The bash shell script for the Conversion of Julian Year and days into general Calender date 
+Year-Month=Day format is in the file "julian2ymd.sh" in the directory "un5390\_f2016\_slanka/CourseWork/Week\_01/slanka\_01" of the MichiganTech Repository.\cite{tc}
+\vfill
 \newpage
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
