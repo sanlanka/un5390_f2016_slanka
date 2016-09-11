@@ -22,3 +22,11 @@ are not following the guidelines given in Tips and/or the end of the assignment.
 Problem #5 (-0.25%):
 Good comments. What was the need to run this program to 10 iterations if it 
 gave the desired error after two iterations?
+
+Problem #6:
+Gives errors when I run it:
+
+./julian2ymd.sh 2016 60
+./julian2ymd.sh: line 12: continue: only meaningful in a `for', `while', or `until' loop
+./julian2ymd.sh: line 21: continue: only meaningful in a `for', `while', or `until' loop
+2016-02-29

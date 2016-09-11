@@ -1,10 +1,10 @@
 
-  slanka (Updated: Thu Sep  8 16:12:33 EDT 2016)
+  slanka (Updated: Sun Sep 11 18:39:22 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
   -------------------------------------------------------------------
-    Assignment 01                       05         -      -    0.00
+    Assignment 01                       05         -      -    4.25
     Assignment 04                       10         -      -    0.00
     Assignment 06                       15         -      -    0.00
     Assignment 09                       20         -      -    0.00
@@ -33,11 +33,11 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -    3.00
+    Grand total                     100.00         -      -    7.25
   -------------------------------------------------------------------
 
-  Current score and grade   :    3.00% (F)
-  Remaining earnable score  :   97.00%
+  Current score and grade   :    7.25% (F)
+  Remaining earnable score  :   92.75%
   Potential score and grade :  100.00% (A)
 
   Final grade = 50% Assignments + 
