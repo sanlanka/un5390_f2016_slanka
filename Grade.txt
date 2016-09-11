@@ -1,5 +1,5 @@
 
-  slanka (Updated: Sun Sep 11 18:39:22 EDT 2016)
+  slanka (Updated: Sun Sep 11 18:43:00 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
@@ -36,9 +36,7 @@
     Grand total                     100.00         -      -    7.25
   -------------------------------------------------------------------
 
-  Current score and grade   :    7.25% (F)
-  Remaining earnable score  :   92.75%
-  Potential score and grade :  100.00% (A)
+  Current score and grade :   7.25% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
