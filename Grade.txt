@@ -1,5 +1,5 @@
 
-  slanka (Updated: Mon Sep 19 20:51:44 EDT 2016)
+  slanka (Updated: Tue Sep 20 11:15:33 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
@@ -24,7 +24,7 @@
     AP: Research marketing II           02         -      -    0.00
     AP: Research marketing III          02         -      -    0.00
     AP: PB&J sandwich recipe            02         -      -    2.00
-    AP: Problem-solving skills          02         -      -    0.00
+    AP: Problem-solving skills          02         -      -    2.00
     AP: Doing a little more             09         -      -    0.00
     Project Status Report 10            01         -      -    0.00
     Project Status Report 11            01         -      -    0.00
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -    9.25
+    Grand total                     100.00         -      -   11.25
   -------------------------------------------------------------------
 
-  Current score and grade :   9.25% (F)
+  Current score and grade :  11.25% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
