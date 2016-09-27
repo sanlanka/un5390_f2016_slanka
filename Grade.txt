@@ -1,5 +1,5 @@
 
-  slanka (Updated: Tue Sep 20 11:18:18 EDT 2016)
+  slanka (Updated: Tue Sep 27 11:36:15 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
@@ -10,8 +10,8 @@
     Assignment 09                       20         -      -    0.00
     AP: Attendance 01                 0.50         -      -    0.50
     AP: Attendance 02                 0.50         -      -    0.50
-    AP: Attendance 04                 0.50         -      -    0.00
-    AP: Attendance 05                 0.50         -      -    0.00
+    AP: Attendance 04                 0.50         -      -    0.25
+    AP: Attendance 05                 0.50         -      -    0.25
     AP: Attendance 06                 0.50         -      -    0.00
     AP: Attendance 07                 0.50         -      -    0.00
     AP: Attendance 08                 0.50         -      -    0.00
@@ -21,7 +21,7 @@
     AP: Attendance 14                 0.50         -      -    0.00
     AP: Attendance FW                 0.50         -      -    0.00
     AP: Research marketing I            02         -      -    2.00
-    AP: Research marketing II           02         -      -    0.00
+    AP: Research marketing II           02         -      -    2.00
     AP: Research marketing III          02         -      -    0.00
     AP: PB&J sandwich recipe            02         -      -    2.00
     AP: Problem-solving skills          02         -      -    2.00
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   11.25
+    Grand total                     100.00         -      -   13.75
   -------------------------------------------------------------------
 
-  Current score and grade :  11.25% (F)
+  Current score and grade :  13.75% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
