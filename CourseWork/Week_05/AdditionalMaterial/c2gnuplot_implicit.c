@@ -6,7 +6,10 @@
 // coordinates to plot within the core computation loop. Compilation takes 
 // less than one second, and execution can take several seconds (depending on 
 // the values of N and interval variables) on most modern hardware running 
-// linux OS with GCC 4.8.5
+// Linux OS with GCC 4.8.5.
+//
+// Plots the data as and when the data is being generated without writing it
+// to a file on the disk.
 //
 // Compilation and execution:
 // gcc -g -Wall c2gnuplot_implicit.c -lm -o c2gnuplot_implicit.x
@@ -56,7 +59,7 @@ int main() {
   pipe = popen("gnuplot -persist", "w");
 
   // Gnuplot settings (basic)
-  fprintf(pipe, "set title 'Distribution of %d random numbers' \n", N);
+  fprintf(pipe, "set title 'Distribution of %d random numbers (implicit plot)' \n", N);
   fprintf(pipe, "set xlabel 'x' \n");
   fprintf(pipe, "set ylabel 'y' \n");
   fprintf(pipe, "set grid \n");
