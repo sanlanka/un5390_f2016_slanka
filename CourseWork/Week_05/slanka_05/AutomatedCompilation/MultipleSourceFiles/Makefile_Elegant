@@ -1,0 +1,43 @@
+# Makefile_Elegant
+# More concise and elegant version of the Makefile used to systematically 
+# compile pi.c, pi_1.c and pi_2.c taking into account their respective 
+# dependencies, and produce pi.x.
+#
+# Usage (one of two ways):
+#   make -f Makefile_Elegant
+#
+#   cp Makefile_Elegant Makefile OR ln -sf Makefile_Elegant Makefile
+#   make
+
+# Compiler, linker, and compilation options
+COMPILER = gcc
+LINKER   = gcc
+CFLAGS   = -c
+DFLAGS   = -g -Wall
+
+# Libraries
+LIBS = -lm
+
+# Other variables
+PROGRAM = pi
+
+# Object files
+OBJS = $(PROGRAM).o $(PROGRAM)_1.o $(PROGRAM)_2.o
+
+# Default target
+all: $(PROGRAM).x
+
+# pi.x (depends on OBJS)
+# $@ : name of the target (i.e., pi.x)
+$(PROGRAM).x: $(OBJS)
+	$(LINKER) $^ $(LIBS) -o $@
+
+# .o (depends on the corresponding .c)
+# $< : name of the first pre-requisite (i.e., .c file)
+%.o: %.c
+	$(COMPILER) $(DFLAGS) $(CFLAGS) $<
+
+# Clean (delete PROGRAM*.o and PROGRAM*.x)
+clean:
+	rm -f $(PROGRAM).o $(PROGRAM).x
+	rm -f $(PROGRAM)_?.o $(PROGRAM)_?.x

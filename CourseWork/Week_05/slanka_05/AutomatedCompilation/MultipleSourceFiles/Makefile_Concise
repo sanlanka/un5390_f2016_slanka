@@ -1,0 +1,29 @@
+# Makefile_Concise
+# Concise and elegant version of the Makefile used to systematically compile 
+# pi.c, pi_1.c and pi_2.c taking into account their respective dependencies, 
+# and produce pi.x.
+#
+# $^ : list of dependencies
+# $< : name of the first pre-requisite
+# $@ : name of the target
+#
+# Usage (one of two ways):
+#   make -f Makefile_Concise
+#
+#   cp Makefile_Concise Makefile OR ln -sf Makefile_Concise Makefile
+#   make
+
+# Default target
+all: pi.x
+
+# pi.x (depends on pi.o, pi_1.o, pi_2.o)
+pi.x: pi.o pi_1.o pi_2.o
+	gcc $^ -lm -o $@
+
+# .o (depends on the corresponding .c)
+%.o: %.c
+	gcc -g -Wall -c $<
+
+# Clean (delete *.o and *.x)
+clean:
+	rm -f *.o *.x
