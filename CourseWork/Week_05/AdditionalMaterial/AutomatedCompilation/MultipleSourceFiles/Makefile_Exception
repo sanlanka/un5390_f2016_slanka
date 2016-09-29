@@ -1,0 +1,53 @@
+# Makefile_Exception
+# More concise and elegant version of the Makefile used to systematically 
+# compile pi.c, pi_1.c and pi_2.c taking into account their respective 
+# dependencies, and produce pi.x. pi_2.c is compiled with an exception
+# while pi.c and pi_1.c are compiled using the general rule.
+#
+# Usage (one of two ways):
+#   make -f Makefile_Exception
+#
+#   cp Makefile_Exception Makefile OR ln -sf Makefile_Exception Makefile
+#   make
+
+# Compiler, linker, compilation and optimization options
+COMPILER = gcc
+LINKER   = gcc
+CFLAGS   = -c
+DFLAGS   = -g -Wall
+OFLAG0   = -O0
+OFLAG1   = -O1
+
+# Libraries
+LIBS = -lm
+
+# Other variables
+PROGRAM = pi
+
+# Object files
+OBJS = $(PROGRAM).o $(PROGRAM)_1.o $(PROGRAM)_2.o
+
+# Default target
+all: $(PROGRAM).x
+
+# pi.x (depends on OBJS)
+# $@ : name of the target (i.e., pi.x)
+$(PROGRAM).x: $(OBJS)
+	$(LINKER) $^ $(LIBS) -o $@
+
+# General rule for generating .o file from a corresponding .c file
+# .o (depends on the corresponding .c)
+# $< : name of the first pre-requisite (i.e., .c file)
+%.o: %.c
+	$(COMPILER) $(DFLAGS) $(CFLAGS) $(OFLAG0) $<
+
+# Exception to the general rule
+# pi_2.o (depends on the corresponding pi_2.c)
+# $< : name of the first pre-requisite (i.e., pi_2.c file)
+pi_2.o: pi_2.c
+	$(COMPILER) $(DFLAGS) $(CFLAGS) $(OFLAG1) $<
+
+# Clean (delete PROGRAM*.o and PROGRAM*.x)
+clean:
+	rm -f $(PROGRAM).o $(PROGRAM).x
+	rm -f $(PROGRAM)_?.o $(PROGRAM)_?.x
