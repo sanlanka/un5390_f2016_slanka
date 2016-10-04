@@ -14,7 +14,7 @@
 COMPILER = gcc
 LINKER   = gcc
 CFLAGS   = -c
-DFLAGS   = -g -Wall
+DFLAGS   = -Wall -g -pg
 OFLAG0   = -O0
 OFLAG1   = -O1
 

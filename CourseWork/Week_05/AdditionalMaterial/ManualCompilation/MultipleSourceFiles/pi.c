@@ -2,16 +2,16 @@
 //
 // C program to compute the value of 'pi' for a given number of terms using 
 // the Newton and Madhava approximations. Compilation/Execution takes less 
-// than one second on most modern hardware running linux OS with GCC 4.8.5.
+// than one second on most modern hardware running Linux OS with GCC.
 //
 // Compilation:
 // With one command:
-// gcc -g -Wall pi.c pi_1.c pi_2.c -lm -o pi.x
+// gcc -Wall -g -pg pi.c pi_1.c pi_2.c -lm -o pi.x
 //
 // With multiple commands:
-// gcc -g -Wall -c pi.c
-// gcc -g -Wall -c pi_1.c
-// gcc -g -Wall -c pi_2.c
+// gcc -Wall -g -pg -c pi.c
+// gcc -Wall -g -pg -c pi_1.c
+// gcc -Wall -g -pg -c pi_2.c
 // gcc pi.o pi_1.o pi_2.o -lm -o pi.x
 //
 // Execution:

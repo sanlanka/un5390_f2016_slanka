@@ -2,14 +2,14 @@
 //
 // C program to compute the value of 'pi' for a given number of terms using 
 // the Newton approximation. Compilation/Execution takes less than one second 
-// on most modern hardware running linux OS with GCC 4.8.5.
+// on most modern hardware running Linux OS with GCC.
 //
 // Compilation:
 // With one command:
-// gcc -g -Wall pi_1.c -lm -o pi_1.x
+// gcc -Wall -g -pg pi_1.c -lm -o pi_1.x
 //
 // With multiple commands:
-// gcc -g -Wall -c pi_1.c
+// gcc -Wall -g -pg -c pi_1.c
 // gcc pi_1.o -lm -o pi_1.x
 //
 // Execution:

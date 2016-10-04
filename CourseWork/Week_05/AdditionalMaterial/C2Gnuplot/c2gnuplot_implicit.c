@@ -6,13 +6,13 @@
 // coordinates to plot within the core computation loop. Compilation takes 
 // less than one second, and execution can take several seconds (depending on 
 // the values of N and interval variables) on most modern hardware running 
-// Linux OS with GCC 4.8.5.
+// Linux OS with GCC.
 //
 // Plots the data as and when the data is being generated without writing it
 // to a file on the disk.
 //
 // Compilation and execution:
-// gcc -g -Wall c2gnuplot_implicit.c -lm -o c2gnuplot_implicit.x
+// gcc -Wall -g -pg c2gnuplot_implicit.c -lm -o c2gnuplot_implicit.x
 // ./c2gnuplot_implicit.x
 
 // Headers

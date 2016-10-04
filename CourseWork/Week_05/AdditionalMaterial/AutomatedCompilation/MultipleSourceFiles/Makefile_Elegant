@@ -13,7 +13,7 @@
 COMPILER = gcc
 LINKER   = gcc
 CFLAGS   = -c
-DFLAGS   = -g -Wall
+DFLAGS   = -Wall -g -pg
 
 # Libraries
 LIBS = -lm

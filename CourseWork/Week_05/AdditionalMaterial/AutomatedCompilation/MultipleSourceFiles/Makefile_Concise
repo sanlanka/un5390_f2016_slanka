@@ -22,7 +22,7 @@ pi.x: pi.o pi_1.o pi_2.o
 
 # .o (depends on the corresponding .c)
 %.o: %.c
-	gcc -g -Wall -c $<
+	gcc -Wall -g -pg -c $<
 
 # Clean (delete *.o and *.x)
 clean:

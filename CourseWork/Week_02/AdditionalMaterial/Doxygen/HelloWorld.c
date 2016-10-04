@@ -2,10 +2,10 @@
 /// @brief Print 'Hello, World!' in a terminal.
 ///
 /// Compilation/Execution takes less the one second on most modern hardware 
-/// running linux OS with GCC 4.8.5.
+/// running Linux OS with GCC.
 ///
 /// Compilation and execution:
-/// gcc -g -Wall HelloWorld.c -o HelloWorld.x
+/// gcc -Wall -g -pg HelloWorld.c -o HelloWorld.x
 /// ./HelloWorld.x
 ///
 /// @author Gowtham

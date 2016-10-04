@@ -18,15 +18,15 @@ pi.x: pi.o pi_1.o pi_2.o
 
 # pi.o (depends on pi.c)
 pi.o: pi.c
-	gcc -g -Wall -c pi.c
+	gcc -Wall -g -pg -c pi.c
 
 # pi_1.o (depends on pi_1.c)
 pi_1.o: pi_1.c
-	gcc -g -Wall -c pi_1.c
+	gcc -Wall -g -pg -c pi_1.c
 
 # pi_2.o (depends on pi_1.c)
 pi_2.o: pi_2.c
-	gcc -g -Wall -c pi_2.c
+	gcc -Wall -g -pg -c pi_2.c
 
 # Clean (delete pi.o, pi.x, pi_1.o, pi_2.o)
 clean:

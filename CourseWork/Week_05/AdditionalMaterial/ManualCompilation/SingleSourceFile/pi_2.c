@@ -2,14 +2,14 @@
 //
 // C program to compute the value of 'pi' for a given number of terms using 
 // the Madhava approximation. Compilation/Execution takes less than one second 
-// on most modern hardware running linux OS with GCC 4.4.7.
+// on most modern hardware running Linux OS with GCC.
 //
 // Compilation:
 // With one command:
-// gcc -g -Wall pi_2.c -lm -o pi_2.x
+// gcc -Wall -g -pg pi_2.c -lm -o pi_2.x
 //
 // With multiple commands:
-// gcc -g -Wall -c pi_2.c
+// gcc -Wall -g -pg -c pi_2.c
 // gcc pi_2.o -lm -o pi_2.x
 //
 // Execution:
