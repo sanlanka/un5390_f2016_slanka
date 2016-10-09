@@ -43,7 +43,7 @@ where {\bf y} is the number of floating point operations.
 
 This method can be further improved by reducing the number of floating point operations. If we reduce the iterations to half on the inner loop , it will still produce the same output. That is each number is being divided by the numbers that span half of its size. 
 
-The program for the calculation of the number of floating point operations is in the {\em problem2.m} file.
+The program for the calculation of the number of floating point operations is in the {\color{blue} problem2.m} file.
 %
 \newpage
 \phantomsection
@@ -51,7 +51,7 @@ The program for the calculation of the number of floating point operations is in
 \problem
 Machine epsilon ia the maximum relative error of the chosen rounding procedure. According to IEEE 754-2008 standard the machine epsilon given by  $ b^{-(p-1)} $ ,where 'p' is the precison. Therefore for a single precision 32 bit binary where 1 bit is implicit, epsilon is $ 2^{-23} $ and a 64 bit binary it is $ 2^{-52} $.
 
-The program for the calculation of the Machine epsilon is in the {\em machine\_epsilon.m} file.
+The program for the calculation of the Machine epsilon is in the {\color{blue} machine\_epsilon.m} file.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{machine_epsilon.pdf}
@@ -65,7 +65,7 @@ The program for the calculation of the Machine epsilon is in the {\em machine\_e
 \problem
 The Approximation for Eulers constant {\bf \em e} is performed using the two expressions given. The main difference between the two approximations is that the first approach is discrete which means that that the values are calculated on discrete integers which means this is an approximation. The second approach is usual approach to calculate $ e^x$. It is caluated for all the values on the number line. The second approach is more accurate and is the right way to do it. This will only be an approximation if n is not considered to be infinity.
 
-The program for the calculation of the Eulers constant is in the {\em exp\_x.m} file.
+The program for the calculation of the Eulers constant is in the {\color{blue} exp\_x.m} file.
 %
 
 \newpage
@@ -86,7 +86,9 @@ $$ P(7\ heads\ exactly) = 0.1172 $$
 A fair coin theoritically from above has 0.1172 chance of getting 7 heads in 10 tosses. It cannot be said, therefore, with certainity said that the coin is fair or not fair because for 7 heads to show up in a consequetive 10 tosses the coin it can be the outcome of a fair coin with the probabilty of the outcome being 0.1172. 
 
 From a therotical perspective, the Probabilty that the coin is fair can be inferred after multiple experiments of the tossing of coins for different n's and depending on the number of heads/tails we consider the P(p) to some calculated value(which depends on the experiments). This is called Bayesian inference.  
+
 $$ P(p/h) = {{\binom{n}{h}.p^h.(1-p)^{(n-h)}}*p(h)}/P(p) $$
+
 \clearpage
 \begin{figure}[ht!]
 	\centering
@@ -100,6 +102,9 @@ $$ P(p/h) = {{\binom{n}{h}.p^h.(1-p)^{(n-h)}}*p(h)}/P(p) $$
 	\includegraphics[height=160mm,width=120mm,angle=-90]{CoinFlip_Multiple.pdf}\caption{As there is increase in the bias the majority of the results fall according to the bias. for e.g. If the bias factor is either "0" or "1", the number of heads are close to zero or one. 
  \label{overflow}}
 \end{figure} 
+The program for the simulation of a single coin toss and the number of heads obtained are in the file {\color{blue} CoinFlip\_single.m} file. and the corresponding files are in {\color{blue} CoinFlip\_single.gnu, CoinFlip\_single.dat,CoinFlip\_single.eps} files.
+
+The program for the simulation of a multiple coins with varying bias factors toss and the number of heads obtained are in the file {\color{blue} CoinFlip\_Multiple.m} file. and the corresponding files are in {\color{blue} CoinFlip\_Multiple.gnu, CoinFlip\_Multiple.dat,CoinFlip\_Multiple.eps} files.
 \vfill
 %
 \newpage
@@ -107,10 +112,22 @@ $$ P(p/h) = {{\binom{n}{h}.p^h.(1-p)^{(n-h)}}*p(h)}/P(p) $$
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 6}
 \problem
+Double precision floating point has about 15 decimal digits of precision and when distance is around 1 meter almost all precision id lost since cosine is approximately equal to $1-x^2/2$ and for 1 radian which is equal to $10^7$ it is calculated to be $1-(10^{-7})^2 = 1-10^{-14}$. So the significant digits cancel out.Flipping this around (which is what the inverse cosine, "arccos", does) means that computing arccos for angles that correspond to meter-length distances cannot be done with any meaningful accuracy. Hence Haversine distance is more reliable when the distance is small. \cite{Dist}
 
+The program is in the file {\color{blue} compute\_distance.m}
 %
 
-%
+\newpage
+\clearpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 7}
+\problem
+Euler found a strange formula for generating prime numbers. Outputs of $ b^2+b+q $ for inputs $ b = 1:q-2 $ are often prime when the constant q is prime. This is often referred to as Euler's Prime polynomial. The best known polynomial that generates (possibly in absolute value) only
+ primes is \cite{EP}, $$b^2+b+41$$
+
+The program for the funtion is in the file {\color{blue} Euler\_Prime.m}
+
+
 \newpage
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
