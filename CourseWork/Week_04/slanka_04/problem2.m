@@ -14,9 +14,10 @@
  
 %Begin
 %%
-d = 5; % Specify the Number d
+d = 30; % Specify the Number d
 fpc = 0;
-for a = 0:d %loop through the numbers upto d one at a time
+fprintf('\n Output from approach 1\n');
+for a = 2:d %loop through the numbers upto d one at a time
     c = 0; %set counter c = 0
     for  b = 1:a %Inner loop to divide the number by the numbers upto itself
         fpc = fpc+1; %Calculate the number of floating point Operations a/b
@@ -30,7 +31,28 @@ for a = 0:d %loop through the numbers upto d one at a time
           disp(a);
       end
 end
-disp(fpc);%display the Floating point operations counter
-%%
+fprintf('\nNumber of Floating Point Operations \n=%d \n',fpc);%display the Floating point operations counter
+
+%% for b = a/2
+fpc1 =0;
+fprintf('\n Output from approach 2\n');
+for a = 2:d %loop through the numbers upto d one at a time
+    c = 0; %set counter c = 0
+    for  b = 1:a/2%Inner loop to divide the number by the numbers upto itself
+        fpc1 = fpc1+1; %Calculate the number of floating point Operations a/b
+        %By default MATLAB's data type is double so every divison
+        %is considered a Floating Point operation
+       if mod(a,b) == 0 
+         c = c+1; %increment counter if a is integer divisible by a
+       end
+    end
+      if c == 1 %if couter is equal to 2 the number is a prime number
+          disp(a);
+      end
+end
+%% 
+fprintf('\nNumber of Floating Point Operations taking "a = d/2":\n =%d \n',fpc1);%display the Floating point operations counter
+
+fprintf('\nNumber of Floating point operations have been reduced by:\n %d\n',(fpc-fpc1));
 %end
     
