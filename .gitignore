@@ -92,6 +92,10 @@ Thumbs.db
 .xml
 
 #
+# ROOT (C plotting feature)
+.root
+
+#
 # Misc
 *.mp3
 *.mp4
