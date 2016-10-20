@@ -1,22 +1,11 @@
-% Type of document being created
+% Document type with options
 \documentclass[letterpaper,12pt,fleqn]{article}
 
-% Packages
-% UN5390.sty will in turn load all other required 
-% packages and (re)define several aspects to fit our needs
+% Required packages and settings (DO NOT UPDATE THIS)
 \usepackage{UN5390}
+\input{UN5390_Settings}
 
-% Information required for title portion -- DO NOT EDIT THIS PART
-% Standard information
-\university{Michigan Technological University}
-\course{UN5390: Scientific Computing I}
-\term{Fall 2015}
-
-% Student information -- UPDATE THIS PART
-\studentname{YOUR NAME}
-\studentemail{YOUR-USERNAME@mtu.edu}
-\advisorname{ADVISOR NAME}
-\advisoremail{ADVISOR-USERNAME@mtu.edu}
+% Project title -- UPDATE THIS PART
 \project{Designing proactive paradigms to leverage 
 orchestrated cutting-edge visionary channels with matrix 
 dynamic functionalities by employing high performance 
@@ -26,7 +15,7 @@ computing infrastructure}
 \begin{document}
 \thispagestyle{empty}
 
-% Title
+% Title (DO NOT UPDATE THIS)
 \projecttitle
 
 % Introduction -- no more than 3-4 sentences
@@ -107,14 +96,14 @@ consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
 porro quisquam est, consectetur, sed quia non numquam eius modi tempora 
 dolore magnam aliquam quaerat voluptatem.
 
-\vfill
-\clearpage
+\newpage
 % References
-\section*{References}
+\phantomsection
 \addcontentsline{toc}{section}{References}
+\section*{References}
 \interlinepenalty=1000
 \bibliographystyle{unsrt}
-\bibliography{UN5390}
+\bibliography{sgowtham,john} % REPLACE john WITH YOUR MICHIGAN TECH ISO USERNAME
 
 \vfill
 % Guidelines
@@ -132,7 +121,7 @@ dolore magnam aliquam quaerat voluptatem.
   \item Keep your research advisor happy by making timely progress. He/She
         controls the score for this project, worth 25\% of the final grade.
   \item Turn in weekly status report, using the provided 
-        \texttt{ProjectWork\_StatusReport.tex} as template before 11:59 pm on 
+        \texttt{ProjectWork\_StatusReport.tex} as template before 4:59 pm on 
         Friday starting week \# 10. Each such report is worth 1\%.
 \end{enumerate}
 
