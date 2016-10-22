@@ -1,0 +1,77 @@
+% Document type with options
+\documentclass[fleqn,letterpaper,12pt]{report}
+
+% Required packages and settings (DO NOT UPDATE THIS)
+\usepackage{UN5390}
+\input{UN5390_Settings}
+
+% Assignment-specific setting (UPDATE THIS WHEN NECESSARY)
+\week{07}
+
+% Document begins
+\begin{document}
+
+% Title (DO NOT UPDATE THIS)
+\assignmenttitle
+
+%
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 1}
+\problem
+Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December,1815 $-$ 27 November,1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's early mechanical general-purpose computer, the Analytical Engine.
+
+She was the daughter of poet George, Lord Byron.Her educational and social exploits brought her into contact with scientists such as Andrew Crosse, Sir David Brewster, Charles Wheatstone, Michael Faraday and the author Charles Dickens, which she used to further her education. Ada described her approach as ``poetical science" and herself as an ``Analyst (and Metaphysician)".
+
+Lovelace became close friends with her tutor Mary Somerville, who introduced her to Charles Babbage in 1833.During a nine-month period in 1842$-$43, Lovelace translated the Italian mathematician Luigi Menabrea's article on Babbage's newest proposed machine, the Analytical Engine. With the article, she appended a set of notes Explaining the Analytical Engine's function was a difficult task, as even many other scientists did not really grasp the concept and the British establishment was uninterested in it, Lovelace's notes even had to explain how the Analytical Engine differed from the original Difference Engine Her work was well received at the time; the scientist Michael Faraday described himself as a supporter of her writing.
+
+Second Tuesday of October is celebrated as Ada Lovelace Day(ALD) in honor of her contributions.The date is arbitrary, chosen in an attempt to make the day maximally convenient for the most number of people avoiding major public holidays, school holidays, exam season, and times of the year when people might be hibernating.Ada was born on 10 December and, in the UK where Ada Lovelace Day is based, December is swamped by Christmas parties, making venue hire tricky. Given her tragically early death at the age of 36, it would feel inappropriate to celebrate her deathday on 27 November.\cite{ll}
+
+Ada Lovelace is known for the Algorithm that could compute Bernoulli numbers which was considered by many as the first computer program in the history of mankind, making her the first computer programer.
+
+The function is given as,
+\begin{equation}
+\begin{split}	
+	0\,=\, -\frac{1}{2}.\frac{2n-1}{2n+1}\,+\,B_1\left(\frac{2n}{2}\right)\,+\,B_3\left(\frac{2n.(2n-1).(2n-1)}{2.3.4}\right)\,+\,B_5\left(\frac{2n.(2n-1).(2n-4)}{2.3.4.5.6}\right)\\
+	\,+..+\,B_{2n-1}
+	\end{split}
+\end{equation}
+where $B_1$, $B_3$, $B_5$ are the Bernouli's numbers. 
+The above equation can be written in general form as ,
+\begin{equation}
+	0\,=\,A_0+ A_1B_1 + A_2B_2 + A_3B_3 + A_5B_5 
+	+...+ B_{2n-1}
+\end{equation}
+
+So the strategy could be used to calculate Bernoulli's numbers recursively. The first few numbers are,
+
+$$ B_2 = \frac{1}{6}, B_4 = \frac{-1}{30}, B_6 = \frac{-1}{42}$$
+
+The Machine that used the Algorithm(Analytical Engine) could compute $B_{2n}$ as long as it could store all the previous numbers of Bernoulli.\cite{lll}
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 2}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 2
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 3
+
+\vfill
+and so on.
+
+\newpage
+% References
+% http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\section*{References}
+\bibliographystyle{unsrt}
+\bibliography{sgowtham,slanka} % REPLACE john WITH YOUR MICHIGAN TECH ISO USERNAME
+
+% Document ends
+\end{document}
