@@ -1,5 +1,5 @@
 
-  slanka (Updated: Thu Nov  3 17:26:52 EDT 2016)
+  slanka (Updated: Fri Nov  4 06:57:44 EDT 2016)
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
