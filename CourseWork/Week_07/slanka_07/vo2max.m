@@ -1,6 +1,5 @@
 %vo2max.m
-%Program to calculate Distance 
-%compute prime numbers greater from 41
+%Program to predict the time based on Vo2Max and Distance
 %Execution:
 %To Run Open in Matlab and Click the Run Icon or 
 %type "run 'vo2max.m'" in the Command Window. 

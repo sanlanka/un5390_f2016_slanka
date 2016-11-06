@@ -1,6 +1,6 @@
 %problem3.m
-%Program to calculate Distance 
-%compute prime numbers greater from 41
+%Program to represnt the relationship of Temperature with respect to time
+%..under a certain surrounding temperature.
 %Execution:
 %To Run Open in Matlab and Click the Run Icon or 
 %type "run 'problem3.m'" in the Command Window. 
