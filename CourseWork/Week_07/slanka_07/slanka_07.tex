@@ -124,7 +124,7 @@ $$T_{n+1} = \alpha T_{n} + \beta\Delta t\;\;$$
 \mbox{,where $\alpha = 1 - k\Delta t$ and $\beta = k\Delta tT_{room}$}
 \end{equation}
 
-Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named \tt{\textcolor{Green}{problem3.m}
+Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named {\tt{\textcolor{Green}{problem3.m}}}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{T.pdf}
@@ -135,6 +135,50 @@ Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 4}
 \problem
+
+As the $N$ value increases, the time of executions increase.The time of executions $t_n$ are plotted against $N$ as,
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{matrix_multiply.pdf}
+	\caption{Time of executions vs Different N's\label{overflow}}
+\end{figure}
+
+The data points are fitted to a curve using MATLAB's curve fitting tool. The curve fits well for a Polynomial of 3rd order. The fitted curve can be used to predict the future values of the time.
+The curve if fitted for a linear model Polynomial of 3rd order:\cite{curvefitting}
+\begin{equation}
+     f(x) = p1*x^3 + p2*x^2 + p3*x + p4
+\label{EQ3}
+\end{equation}
+with the coefficients within a $95\%$ confidence are given with the confidence bounds as,
+\begin{equation}
+     p1 =   1.834e-08 
+	 \mbox{\;with 95\% confidence bounds\;(8.74e-09, 2.794e-08)}
+\label{EQ3}
+\end{equation}
+\begin{equation}
+     \mbox{\;\;p2 =  -3.701e-05 with 95\% confidence bounds\;(-5.09e-05, -2.312e-05)} 
+\label{EQ4}
+\end{equation}
+\begin{equation}
+     \mbox{\;\;p3 =   0.02833 with 95\% confidence bounds\;(0.02377, 0.03288)}
+\label{EQ5}
+\end{equation}
+\begin{equation}
+     \mbox{\;\;p4 =   -5.947 with 95\% confidence bounds(-6.179, -5.715)}
+\label{EQ6}
+\end{equation}
+
+This plot is shown in Figure 3.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{matrixcurve.pdf}
+	\caption{Time of executions vs Different N's\label{overflow}}
+\end{figure}
+
+As the number of elements increase in the matrix it consumes more RAM as it executes. So multiplication of big matrices or finding big matrices' inverse is computionally more difficult. This can be overcome by making the matrice as sparse as we can or using a GPU or any other hardware accelerator to process data parallely to increase the performance in terms of speed of computation. 
+
+The Program for the matrix multiplication is in the {\tt{\textcolor{Green}{matrix\_multiply.m}}}
 \newpage
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
