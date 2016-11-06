@@ -52,18 +52,89 @@ The Machine that used the Algorithm(Analytical Engine) could compute $B_{2n}$ as
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 2}
 \problem
-TYPESET YOUR SOLUTION FOR PROBLEM 2
+Vo2max is the maximum oxygen consumption [$mL/(kg.min)$]. By Daniels and Gilbert formula Vo2max can be calculated and subsequently given a Distance($S$) and Vo2max, we can predict the time by numerical methods as given in the program {\tt vo2max.m}. Velocity{($v$)} required in the formula is calcuated as {$S/t$} where {$ t $} is the time. The table is completed as follows:
+% Please add the following required packages to your document preamble:
+% \usepackage{graphicx}
+\begin{table}[h]
+\centering
+\caption{Time given Vo2Max and Distance}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$d(miles)$ & $t(h:mm:ss)$ & $VO_2Max$  & $t_c(h:mm:ss)$ & $e = |t - t_c|$ \\ \hline \hline
+3.10       & 00:22:07    & {\tt43.829318} & {\tt00:22:07}      & {\tt0}               \\ \hline
+6.20       & 0:47:47     & {\tt41.776160} & {\tt00:47:47}      & {\tt0}               \\ \hline
+13.10      & 1:43:02     & {\tt43.231491} & {\tt1:43:02}       & {\tt0}               \\ \hline
+26.20      & 4:06:21     & {\tt36.411280} & {\tt4:06:21}       & {\tt0}               \\ \hline
+\end{tabular}%
+\end{table}
 
+The Program that generated the outputs in the table is named \textcolor{Green}{\tt vo2max.m}
 %
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 3}
 \problem
-TYPESET YOUR SOLUTION FOR PROBLEM 3
+Newton's law of cooling states that the rate of heat loss of a body is proportional to the difference in temperatures between the body and its surrounding environment which can be written as,
+\begin{equation}
+$$\frac{dT}{dt} = k(T_{room} -T)$$
+\end{equation}
 
-\vfill
-and so on.
+,where $t$ is the time at that instance, $T$ is the temperature of the liquid at that instance $k$ is a constant.
 
+With assumptions that the temperature of the room remains constant and also assuming discrete time($mins$) steps $\Delta t = 1$. 
+\begin{equation}
+$$\frac{1}{T_{room}-T} = kdt$$
+\end{equation}
+
+Integrating on both sides, we get,
+\begin{equation}
+$$log|T_{room}-T| = kt+c$$
+\end{equation}
+\begin{equation}
+$$e^{log|T_{room}-T|} = e^{kt+c}$$
+\end{equation}
+\begin{equation}
+$$|T_{room}-T| = C.e^{kt}$$
+\end{equation}
+,where $C = e^c$.
+\begin{equation}
+$$T = T_{room} - C.e^{kt}$$
+\label{PQ2_EQ1}
+\end{equation}
+
+$C$ can be easily found by using the initial conditions i.e at $t=0$
+thus,
+$C = T_{room}-T$
+which is $70-200 = -130$ in this problem.
+
+Substituting the above in \eqref{PQ2_EQ1}, we have the Equation,
+\begin{equation}
+$$T = T_{room} - 130.e^{kt}$$
+\end{equation}
+
+For discrete time, this equation can be written as 
+\begin{equation}
+T_{n+1} = T_{n} + k(T_{room} - T_n)\Delta t
+\end{equation}
+which can further be written as 
+\begin{equation}
+$$T_{n+1} = \alpha T_{n} + \beta\Delta t\;\;$$
+\label{EQ2}
+\mbox{,where $\alpha = 1 - k\Delta t$ and $\beta = k\Delta tT_{room}$}
+\end{equation}
+
+Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named \tt{\textcolor{Green}{problem3.m}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{T.pdf}
+	\caption{Rate of change of Temperature of the liquid w.r.t Time\label{overflow}}
+\end{figure}
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 4}
+\problem
 \newpage
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
