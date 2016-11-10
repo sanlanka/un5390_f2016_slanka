@@ -21,7 +21,7 @@
 #include <unistd.h>  // Hostname, etc.
 
 // factorial()
-// Calculates the factorial
+// Computes the factorial
 long double factorial(int n) {
 
   // Variable declaration
@@ -79,7 +79,7 @@ long double pi_madhava(int n) {
 // Evaluates the error in computed value of PI
 long double pi_error(long double PI, long double PI_C) {
 
-  // Calculate the error in PI_C
+  // Compute the error in PI_C
   long double PI_ERROR = fabs((PI - PI_C)/PI) * 100;
 
   // Return PI_ERROR to parent module
@@ -94,7 +94,7 @@ long int sum2n_loop(long int n) {
   long int i   = 0; // Loop index
   long int sum = 0; // Sum
 
-  // Calculate the sum
+  // Compute the sum
   for (i = 1; i <= n; i++) {
     sum = sum + i;
   }
@@ -110,7 +110,7 @@ long int sum2n_gauss(long int n) {
   // Variable declaration
   long int sum = 0; // Sum
 
-  // Calculate the sum
+  // Compute the sum
   sum = n * (n + 1)/2;
 
   // Return sum to parent module
