@@ -18,15 +18,15 @@
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 1}
 \problem
-Augusta Ada King-Noel, Countess of Lovelace (née Byron; 10 December,1815 $-$ 27 November,1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's early mechanical general-purpose computer, the Analytical Engine.
+Augusta Ada King-Noel, Countess of Lovelace (born Byron; 10 December,1815 $-$ 27 November,1852) was an English mathematician and writer, chiefly known for her work on Charles Babbage's early mechanical general-purpose computer, the ``Analytical Engine".
 
-She was the daughter of poet George, Lord Byron.Her educational and social exploits brought her into contact with scientists such as Andrew Crosse, Sir David Brewster, Charles Wheatstone, Michael Faraday and the author Charles Dickens, which she used to further her education. Ada described her approach as ``poetical science" and herself as an ``Analyst (and Metaphysician)".
+She was the daughter of poet George, Lord Byron. Her educational and social exploits brought her into contact with scientists such as Andrew Crosse, Sir David Brewster, Charles Wheatstone, Michael Faraday and the author Charles Dickens, which she used to further her education. Ada described her approach as ``poetical science" and herself as an ``Analyst (and metaphysician)".
 
-Lovelace became close friends with her tutor Mary Somerville, who introduced her to Charles Babbage in 1833.During a nine-month period in 1842$-$43, Lovelace translated the Italian mathematician Luigi Menabrea's article on Babbage's newest proposed machine, the Analytical Engine. With the article, she appended a set of notes Explaining the Analytical Engine's function was a difficult task, as even many other scientists did not really grasp the concept and the British establishment was uninterested in it, Lovelace's notes even had to explain how the Analytical Engine differed from the original Difference Engine Her work was well received at the time; the scientist Michael Faraday described himself as a supporter of her writing.
+Lovelace became close friends with her tutor Mary Somerville, who introduced her to Charles Babbage in 1833. During a nine-month period in 1842$-$43, Lovelace translated the Italian mathematician Luigi Menabrea's article on Babbage's newest proposed machine, the analytical engine. With the article, she appended a set of notes explaining the analytical engine's function was a difficult task, as even many other scientists did not really grasp the concept and the British establishment was uninterested in it, Lovelace's notes even had to explain how the Analytical Engine differed from the original ``Difference Engine". Her work was well received at the time; the scientist Michael Faraday described himself as a supporter of her writing.
 
-Second Tuesday of October is celebrated as Ada Lovelace Day(ALD) in honor of her contributions.The date is arbitrary, chosen in an attempt to make the day maximally convenient for the most number of people avoiding major public holidays, school holidays, exam season, and times of the year when people might be hibernating.Ada was born on 10 December and, in the UK where Ada Lovelace Day is based, December is swamped by Christmas parties, making venue hire tricky. Given her tragically early death at the age of 36, it would feel inappropriate to celebrate her deathday on 27 November.\cite{ll}
+Second tuesday of October is celebrated as Ada Lovelace Day (ALD) in honor of her contributions. The date is arbitrary, chosen in an attempt to make the day maximally convenient for the most number of people avoiding major public holidays, school holidays, exam season, and times of the year when people might be hibernating. Ada was born on 10 December and, in the UK where Ada Lovelace day is based, December is swamped by Christmas parties, making venue hire tricky. Given her tragically early death at the age of 36, it would feel inappropriate to celebrate her deathday on 27 November.\cite{ll}
 
-Ada Lovelace is known for the Algorithm that could compute Bernoulli numbers which was considered by many as the first computer program in the history of mankind, making her the first computer programer.
+Ada Lovelace is known for the algorithm that could compute Bernoulli numbers which was considered by many as the first computer program in the history of mankind, making her the first computer programer.
 
 The function is given as,
 \begin{equation}
@@ -46,18 +46,18 @@ So the strategy could be used to calculate Bernoulli's numbers recursively. The 
 
 $$ B_2 = \frac{1}{6}, B_4 = \frac{-1}{30}, B_6 = \frac{-1}{42}$$
 
-The Machine that used the Algorithm(Analytical Engine) could compute $B_{2n}$ as long as it could store all the previous numbers of Bernoulli.\cite{lll}
+The machine that used the Algorithm (Analytical Engine) could compute $B_{2n}$ as long as it could store all the previous numbers of Bernoulli.\cite{lll} The function for the program is in the file \textcolor{Green}{\tt Bernoullinos.m}\cite{PK}
 %
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 2}
 \problem
-Vo2max is the maximum oxygen consumption [$mL/(kg.min)$]. By Daniels and Gilbert formula Vo2max can be calculated and subsequently given a Distance($S$) and Vo2max, we can predict the time by numerical methods as given in the program {\tt vo2max.m}. Velocity{($v$)} required in the formula is calcuated as {$S/t$} where {$ t $} is the time. The table is completed as follows:
+VO2max is the maximum oxygen consumption [$mL/(kg.min)$]. By Daniels and Gilbert formula VO2max can be calculated and subsequently given a distance($S$) and VO2max, we can predict the time by numerical methods as given in the program {\tt vo2max.m}. Velocity{($v$)} required in the formula is calcuated as {$S/t$} where {$ t $} is the time. The table is completed as follows:
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table}[h]
 \centering
-\caption{Time given Vo2Max and Distance}
+\caption{Time given VO2Max and Distance}
 \label{my-label}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -69,36 +69,37 @@ $d(miles)$ & $t(h:mm:ss)$ & $VO_2Max$  & $t_c(h:mm:ss)$ & $e = |t - t_c|$ \\ \hl
 \end{tabular}%
 \end{table}
 
-The Program that generated the outputs in the table is named \textcolor{Green}{\tt vo2max.m}
+The program that generated the outputs in the table is named \textcolor{Green}{\tt vo2max.m}
+%
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 3}
 \problem
 Newton's law of cooling states that the rate of heat loss of a body is proportional to the difference in temperatures between the body and its surrounding environment which can be written as,
 \begin{equation}
-$$\frac{dT}{dt} = k(T_{room} -T)$$
+\frac{dT}{dt} = k(T_{room} -T)
 \end{equation}
 
-,where $t$ is the time at that instance, $T$ is the temperature of the liquid at that instance $k$ is a constant.
+where $t$ is the time at that instance, $T$ is the temperature of the liquid at that instance $k$ is a constant.
 
 With assumptions that the temperature of the room remains constant and also assuming discrete time($mins$) steps $\Delta t = 1$. 
 \begin{equation}
-$$\frac{1}{T_{room}-T} = kdt$$
+\frac{1}{T_{room}-T} = kdt
 \end{equation}
 
 Integrating on both sides, we get,
 \begin{equation}
-$$log|T_{room}-T| = kt+c$$
+log|T_{room}-T| = kt+c
 \end{equation}
 \begin{equation}
-$$e^{log|T_{room}-T|} = e^{kt+c}$$
+e^{log|T_{room}-T|} = e^{kt+c}
 \end{equation}
 \begin{equation}
-$$|T_{room}-T| = C.e^{kt}$$
+|T_{room}-T| = C.e^{kt}
 \end{equation}
-,where $C = e^c$.
+where $C = e^c$.
 \begin{equation}
-$$T = T_{room} - C.e^{kt}$$
+T = T_{room} - C.e^{kt}
 \label{PQ2_EQ1}
 \end{equation}
 
@@ -109,7 +110,7 @@ which is $70-200 = -130$ in this problem.
 
 Substituting the above in \eqref{PQ2_EQ1}, we have the Equation,
 \begin{equation}
-$$T = T_{room} - 130.e^{kt}$$
+T = T_{room} - 130.e^{kt}
 \end{equation}
 
 For discrete time, this equation can be written as 
@@ -118,16 +119,16 @@ T_{n+1} = T_{n} + k(T_{room} - T_n)\Delta t
 \end{equation}
 which can further be written as 
 \begin{equation}
-$$T_{n+1} = \alpha T_{n} + \beta\Delta t\;\;$$
+T_{n+1} = \alpha T_{n} + \beta\Delta t\;\;
 \label{EQ2}
-\mbox{,where $\alpha = 1 - k\Delta t$ and $\beta = k\Delta tT_{room}$}
+\mbox{,where \alpha = 1 - k\Delta t and \beta = k\Delta tT_{room}}
 \end{equation}
 
-Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named {\tt{\textcolor{Green}{problem3.m}}}
+Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named {\tt{\textcolor{Green}{NewtonsCooling.m}}}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{T.pdf}
-	\caption{Rate of change of Temperature of the liquid w.r.t Time\label{overflow}}
+	\caption{Rate of change of temperature of the liquid w.r.t time\label{overflow}}
 \end{figure}
 
 \newpage
@@ -140,32 +141,32 @@ As the $N$ value increases, the time of executions increase.The time of executio
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{matrix_multiply.pdf}
-	\caption{Time of executions vs Different N's\label{overflow}}
+	\caption{time of executions vs different N's\label{overflow}}
 \end{figure}
 
 The data points are fitted to a curve using MATLAB's curve fitting tool. The curve fits well for a Polynomial of 3rd order. The fitted curve can be used to predict the future values of the time.
-The curve if fitted for a linear model Polynomial of 3rd order:\cite{curvefitting}
+The curve if fitted for a linear model polynomial of 3rd order:\cite{curvefitting}
 \begin{equation}
-     f(x) = p1*x^3 + p2*x^2 + p3*x + p4
 \label{EQ3}
+     f(x) = p1*x^3 + p2*x^2 + p3*x + p4
 \end{equation}
 with the coefficients within a $95\%$ confidence are given with the confidence bounds as,
 \begin{equation}
      p1 =   1.834e-08 
 	 \mbox{\;with 95\% confidence bounds\;(8.74e-09, 2.794e-08)}
-\label{EQ3}
-\end{equation}
-\begin{equation}
-     \mbox{\;\;p2 =  -3.701e-05 with 95\% confidence bounds\;(-5.09e-05, -2.312e-05)} 
 \label{EQ4}
 \end{equation}
 \begin{equation}
-     \mbox{\;\;p3 =   0.02833 with 95\% confidence bounds\;(0.02377, 0.03288)}
+     \mbox{\;\;p2 =  -3.701e-05 with 95\% confidence bounds\;(-5.09e-05, -2.312e-05)} 
 \label{EQ5}
 \end{equation}
 \begin{equation}
-     \mbox{\;\;p4 =   -5.947 with 95\% confidence bounds(-6.179, -5.715)}
+     \mbox{\;\;p3 =   0.02833 with 95\% confidence bounds\;(0.02377, 0.03288)}
 \label{EQ6}
+\end{equation}
+\begin{equation}
+     \mbox{\;\;p4 =   -5.947 with 95\% confidence bounds(-6.179, -5.715)}
+\label{EQ7}
 \end{equation}
 
 This plot is shown in Figure 3.
@@ -175,9 +176,9 @@ This plot is shown in Figure 3.
 	\caption{Time of executions vs Different N's\label{overflow}}
 \end{figure}
 
-As the number of elements increase in the matrix it consumes more RAM as it executes. So multiplication of big matrices or finding big matrices' inverse is computionally more difficult. This can be overcome by making the matrice as sparse as we can or using a GPU or any other hardware accelerator to process data parallely to increase the performance in terms of speed of computation. 
+In order to predict the time for a size $x_i$ we simply substitute it in \eqref{EQ3} with the above coefficients for p and predict it's time within 95\% bounds. As the number of elements increase in the matrix it consumes more RAM as it executes. So multiplication of big matrices or finding big matrices' inverse is computionally more difficult. This can be overcome by making the matrice as sparse as we can or using a GPU or any other hardware accelerator to process data parallely to increase the performance in terms of speed of computation. 
 
-The Program for the matrix multiplication is in the {\tt{\textcolor{Green}{matrix\_multiply.m}}}
+The program for the matrix multiplication is in the  {\tt{\textcolor{Green}{matrix\_multiply.m}}}
 \newpage
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files

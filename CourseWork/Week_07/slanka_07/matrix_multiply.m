@@ -34,25 +34,6 @@ for i = 1:N
     end
 end
 timestamp(end+1) = toc;
-%% Curve Fitting
-%end
-TT = log(timestamps);
-[xData, yData] = prepareCurveData( T, TT );
-
-% Set up fittype and options.
-ft = fittype( 'poly3' );
-% Fit model to data.
-[fitresult, gof] = fit( xData, yData, ft );
-
-% Plot fit with data.
-figure( 'Name', 'Time vs size of Matrix(N)' );
-h = plot( fitresult, xData, yData, 'predobs' );
-set(h(1),'linewidth',8);
-set(gca,'fontsize',16)
-title('Curve Fit of Execution Time vs N ');
-legend( h, 'log(Time) vs. N', 'Time vs size of Matrix(N)', 'Lower bounds (Execution Time)', 'Upper bounds (Execution Time)', 'Location', 'NorthEast' );
-% Label axes
-xlabel 'size N'
-ylabel log(Time(secs))
-grid on
+disp('C = ');
+disp(C);
 %end
