@@ -46,7 +46,7 @@ So the strategy could be used to calculate Bernoulli's numbers recursively. The 
 
 $$ B_2 = \frac{1}{6}, B_4 = \frac{-1}{30}, B_6 = \frac{-1}{42}$$
 
-The machine that used the Algorithm (Analytical Engine) could compute $B_{2n}$ as long as it could store all the previous numbers of Bernoulli.\cite{lll} The function for the program is in the file \textcolor{Green}{\tt Bernoullinos.m}\cite{PK}
+The machine that used the Algorithm (Analytical Engine) could compute $B_{2n}$ as long as it could store all the previous numbers of Bernoulli.\cite{lll} The function for the algorithm is in the file \textcolor{Green}{\tt Bernoullinos.m}\cite{PK}
 %
 \newpage
 \phantomsection
@@ -82,7 +82,7 @@ Newton's law of cooling states that the rate of heat loss of a body is proportio
 
 where $t$ is the time at that instance, $T$ is the temperature of the liquid at that instance $k$ is a constant.
 
-With assumptions that the temperature of the room remains constant and also assuming discrete time($mins$) steps $\Delta t = 1$. 
+With assumptions that the temperature of the room remains constant and also assuming discrete time ($mins$) steps $\Delta t = 1$. 
 \begin{equation}
 \frac{1}{T_{room}-T} = kdt
 \end{equation}
@@ -119,12 +119,11 @@ T_{n+1} = T_{n} + k(T_{room} - T_n)\Delta t
 \end{equation}
 which can further be written as 
 \begin{equation}
-T_{n+1} = \alpha T_{n} + \beta\Delta t\;\;
-\label{EQ2}
-\mbox{,where \alpha = 1 - k\Delta t and \beta = k\Delta tT_{room}}
+T_{n+1} = \alpha T_{n} + \beta \Delta t\label{EQ2}
 \end{equation}
+where $\alpha = 1 - k\Delta t$ and $\beta = k\Delta tT_{room}}$
 
-Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$. The program is in the file named {\tt{\textcolor{Green}{NewtonsCooling.m}}}
+Using the equation \eqref{EQ2}, the temperature and the time required for the liquid to reach the room temperature within in a error margin of $0.1^oF$ can be predicted. The program is in the file named {\tt{\textcolor{Green}{NewtonsCooling.m}}}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{T.pdf}
@@ -136,7 +135,7 @@ Using \eqref{EQ2}, the Temperature and the time required for the liquid to reach
 \addcontentsline{toc}{section}{Problem \# 4}
 \problem
 
-As the $N$ value increases, the time of executions increase.The time of executions $t_n$ are plotted against $N$ as,
+As the $N$ value increases, the time of executions increase. The time of executions $t_n$ are plotted against $N$ as,
 
 \begin{figure}[ht!]
 	\centering
@@ -148,24 +147,24 @@ The data points are fitted to a curve using MATLAB's curve fitting tool. The cur
 The curve if fitted for a linear model polynomial of 3rd order:\cite{curvefitting}
 \begin{equation}
 \label{EQ3}
-     f(x) = p1*x^3 + p2*x^2 + p3*x + p4
+     f(x) = p1\,x^3 + p2\,x^2 + p3\,x + p4
 \end{equation}
 with the coefficients within a $95\%$ confidence are given with the confidence bounds as,
 \begin{equation}
-     p1 =   1.834e-08 
+     p1 =   1.834\,e^{-8} 
 	 \mbox{\;with 95\% confidence bounds\;(8.74e-09, 2.794e-08)}
 \label{EQ4}
 \end{equation}
 \begin{equation}
-     \mbox{\;\;p2 =  -3.701e-05 with 95\% confidence bounds\;(-5.09e-05, -2.312e-05)} 
+     \mbox{\;\;$p2$ =  -3.701\,e-{5} with 95\% confidence bounds\;(-5.09e-05, -2.312e-05)} 
 \label{EQ5}
 \end{equation}
 \begin{equation}
-     \mbox{\;\;p3 =   0.02833 with 95\% confidence bounds\;(0.02377, 0.03288)}
+     \mbox{\;\;$p3$ =   0.02833 with 95\% confidence bounds\;(0.02377, 0.03288)}
 \label{EQ6}
 \end{equation}
 \begin{equation}
-     \mbox{\;\;p4 =   -5.947 with 95\% confidence bounds(-6.179, -5.715)}
+     \mbox{\;\;$p4$ =   -5.947 with 95\% confidence bounds(-6.179, -5.715)}
 \label{EQ7}
 \end{equation}
 
@@ -176,12 +175,40 @@ This plot is shown in Figure 3.
 	\caption{Time of executions vs Different N's\label{overflow}}
 \end{figure}
 
-In order to predict the time for a size $x_i$ we simply substitute it in \eqref{EQ3} with the above coefficients for p and predict it's time within 95\% bounds. As the number of elements increase in the matrix it consumes more RAM as it executes. So multiplication of big matrices or finding big matrices' inverse is computionally more difficult. This can be overcome by making the matrice as sparse as we can or using a GPU or any other hardware accelerator to process data parallely to increase the performance in terms of speed of computation. 
+In order to predict the time for a size $x_i$ we simply substitute it in \eqref{EQ3} with the above coefficients for $p$ and predict it's time within 95\% confidence bounds. As the number of elements increase in the matrix it consumes more RAM as it executes. So multiplication of big matrices or finding big matrices' inverse is computionally more difficult. This can be overcome by making the matrice as sparse as we can or using a GPU or any other hardware accelerator to process data parallely to increase the performance in terms of speed of computation. 
 
 The program for the matrix multiplication is in the  {\tt{\textcolor{Green}{matrix\_multiply.m}}}
+
+\addtocounter{problemcounter}{2}
+
+
 \newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \#7}
+\problem 
+
+The value of $pi$ can be approximated by using the Monte Carlo method. We consider a circle with radius $r=0.5$ inscribed within a square of area $1$. The ratio of area the circle to the area of the square should be equal to $pi$. This can be achieved by randomly picking points in the area and counting the number of points inside the circle. This ratio approximates the value of $pi$. The more the number of random points, the more accurate is the approximation.
+
+The approximation is used ot calcuate the value of $pi$ and the error associated with it. Figures below show the accuracy of the approximation with respect to the number of points and also the value of $pi$ with respect to the number of points. 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{Error.pdf}
+	\caption{Error vs Number of points \label{overflow}}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{pi.pdf}
+	\caption{$pi$ value vs Number of points\label{overflow}}
+\end{figure}
+The figures show that as the number of points that approximate the value of $pi$, the more accurate is the value of $pi$. The problem comes only when the approximated value is either too small or too large and there is a need for a large number of points which is computationaly complex and might require large memory. e.g. In cases where there is a large matrix multiplication involved or when the computed value is smaller than the machine epsilon etc.
+
+The program for approximating the value of $pi$ using the monte carlo method is in the file \textcolor{Green}{\tt MonteCarloPi.m}
+%
 % References
 % http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
+\newpage
 \phantomsection
 \addcontentsline{toc}{section}{References}
 \section*{References}
