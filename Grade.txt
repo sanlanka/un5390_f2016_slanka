@@ -1,12 +1,12 @@
 
-  slanka (Updated: Fri Nov 11 14:40:30 EST 2016)
+  slanka
 
   -------------------------------------------------------------------
                                     MaxPct  MaxScore  Score     Pct
   -------------------------------------------------------------------
     Assignment 01                    05.00         -      -    4.25
     Assignment 04                    10.00         -      -    8.50
-    Assignment 07                    15.00         -      -    0.00
+    Assignment 07                    15.00         -      -   15.00
     Assignment 09                    20.00         -      -    0.00
     AP: Attendance 01                 0.50         -      -    0.50
     AP: Attendance 02                 0.50         -      -    0.50
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   26.75
+    Grand total                     100.00         -      -   41.75
   -------------------------------------------------------------------
 
-  Current score and grade :  26.75% (F)
+  Current score and grade :  41.75% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
