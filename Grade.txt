@@ -28,15 +28,15 @@
     AP: Doing a little more             09         -      -    0.50
     Project Status Report 10            01         -      -    1.00
     Project Status Report 11            01         -      -    0.00
-    Project Status Report 12            01         -      -    0.00
+    Project Status Report 12            01         -      -    1.00
     Project Status Report 13            01         -      -    0.00
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   41.75
+    Grand total                     100.00         -      -   42.75
   -------------------------------------------------------------------
 
-  Current score and grade :  41.75% (F)
+  Current score and grade :  42.75% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
