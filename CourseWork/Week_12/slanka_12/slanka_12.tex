@@ -1,0 +1,87 @@
+% Document type with options
+\documentclass[fleqn,letterpaper,12pt]{report}
+
+% Required packages and settings (DO NOT UPDATE THIS)
+\usepackage{UN5390}
+\input{UN5390_Settings}
+
+% Assignment-specific setting (UPDATE THIS WHEN NECESSARY)
+\week{12}
+
+% Document begins
+\begin{document}
+
+% Title (DO NOT UPDATE THIS)
+\assignmenttitle
+
+%
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 1}
+\problem
+The below is the list of the most powerful supercomputers as per the 48th edition of the TOP500 list released in November 2016 \cite{SC16}. The list sees China and the United States competing against each other in the field of supercomputing.
+\begin{table}[h!]
+\centering
+\caption{Top 10 most powerful supercomputers, SC16, November, 2016}
+\label{my-label}
+\scalebox{0.85}{
+\begin{tabular}{l|l|l|r|r|r|r}
+	\multicolumn 4 {c}{} &
+	\multicolumn 2 {|c|}{\bf{TFLOPS}}&
+	\multicolumn 1 {c}{}\\ \hline
+ \bf{\#} & \bf{Name}            & \bf{Location}         &\bf{Processors}&\bf{Expt} &\bf{Theory} &\bf{Power(MW)}\\ 
+ \hline 
+ 1  & Sunway TaihuLight         & 2016, NSCW, China      & 10,649,600   & 93,014.6  & 125,435.9 & 15.371 \\
+ \hline
+ 2  & Tianhe-2                  & 2013, NSCG, China      & 3,120,000    & 33,862.7  & 54,902.4  & 17.808 \\
+ \hline
+ 3  & Titan                     & 2012, ORNL, USA        & 560,640      & 17,590.0  & 27,112.5  & 8.209 \\
+ \hline
+ 4  & Sequoia					& 2012, LLNL, USA		  & 1,572,864   & 17,173.2  & 20,132.7  & 7.890 \\
+ \hline
+ 5  & Cori 						& 2016, LBNL, USA		  & 622,336		& 14,014.7  & 27,880.7  & 3.939 \\
+ \hline
+ 6  & Oakforest-PACS			& 2016, JCAHPC, Japan    & 556,104      & 13,554.6  & 24,913.5   & 2.719 \\
+ \hline
+ 7  & K				     		& 2011, RIKEN, Japan	 & 705,024		& 10,510.0  & 11,280.4  & 12.660 \\
+ \hline
+ 8  & Piz Daint				    & 2012, CSCS, Switzerland& 206,720      & 9779.0	& 15,988.0  & 1,312 \\
+ \hline
+ 9  & Mira		   			    & 2012, ANL, USA		 & 786,432	    & 8,586.6	& 10,066.3  & 3.945 \\
+ \hline
+ 10 & Trinity				    & 2015, LANL, USA        & 301,056		& 8,100.9   & 11,078.9	& 4.233 \\
+ \hline
+\end{tabular}%
+}
+\end{table}
+%
+\\
+Titan is known for being the first major supercomputer to utilize a hybrid architecture, that utilizes both conventional AMD Opteron CPU's and NVIDIA Tesla GPU accelerators \cite{titan}. It is built out of 18,688 compute nodes and handles a total of 38 GB of memory per node. The machine built by Cray at the US government's Oak Ridge National Laboratory in Tennessee with a cost of about 97 million USD. It will be used for projects such as modelling of the molecular physics of combustion, simulating interactions between electrons and atoms in magnetic materials, simulating nuclear reactions with the aim of reducing nuclear waste, simlating galaxies etc.
+
+Clocking in at 16.32 sustained petaflops (quadrillion floating point operations per second), Sequoia ranks 4th in the Top500 list of the world's fastest supercomputers released November, 2016. A 96-rack IBM Blue Gene/Q system, Sequoia will enable simulations that explore phenomena at extreme resolutions. It is built out of 98,304 compute nodes; 1.6 million cores; and 1.6 petabytes of memory. Sequoia is dedicated to NNSA's Advanced Simulation and Computing (ASC) program for stewardship of the nation's nuclear weapons stockpile, a joint effort from LLNL, Los Alamos National Laboratory and Sandia National Laboratories. The NNSA/LLNL/IBM partnership has produced six HPC systems that have been ranked among the world's most powerful computers so far \cite{sequoia}. 
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 2}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 2
+
+%
+\newpage
+\phantomsection
+\addcontentsline{toc}{section}{Problem \# 3}
+\problem
+TYPESET YOUR SOLUTION FOR PROBLEM 3
+
+\vfill
+and so on.
+
+\newpage
+% References
+% http://tex.stackexchange.com/questions/84099/bibliographies-from-multiple-bib-files
+\phantomsection
+\addcontentsline{toc}{section}{References}
+\section*{References}
+\bibliographystyle{unsrt}
+\bibliography{sgowtham,slanka} % REPLACE john WITH YOUR MICHIGAN TECH ISO USERNAME
+
+% Document ends
+\end{document}
