@@ -62,9 +62,44 @@ Clocking in at 16.32 sustained petaflops (quadrillion floating point operations 
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 2}
 \problem
-TYPESET YOUR SOLUTION FOR PROBLEM 2
+Considering that the current computing infrastructure includes access to a HPC cluster with 1024 processors with 4 GB RAM per processor, 56 Gbps InfiniBand network and 64 TB archival quality storage. The net RAM available is 4096 GB. Considering the new donation towards the research, we now have a 8192 processors and each processor is equipped with a RAM of 16 GB contributing towards a total RAM of 131,072 GB. Assuming that the problem is still equally scable, our net RAM has increased 32 times. 
+Considering the same number of $FLOPS/CPU cycle$ we see that the newly donated machine is ~8 times faster than the present machine. If the research problem is equally scalable, we see that, the new machine can therefore finish a whole run or equivalently we can solve a problem of size $8N$ in $t$ considering again that the problem is equally scalable.
 
+The ultimate question to answer is whether to solve a problem of size $N$ in 1/8 th of the time $t$ or size $8N$ in $t$ time or sometime in between. This question is equivalent to whether to go for more speed or more parallelism. If the time $t$ is relatively small and saving anymore time is not considered anymore efficient, there would be no reason to make it any further faster. In general sense if the application includes what we call \i{data parallelism}, it is a simple task to achieve speedup. Let us not consider the increase in 10\% speed of the new processors for convenience. 
+
+The reasons for whether or not to choose a machine with higher number of processors is purely dependent on :-\\
+1. time $t$ \\
+2. amount of parallelism \\
+3. cost \\
+4. power 
+
+If we have increased performance in terms of time to solve the problem, it might seem reasonable at first to opt for a machine with higher capabilties but a better time is related to the amount of parallelism in the application. Here we consider that the scalabilty is 100\%, so the performance would increase well but $t$ is given to be 90 days so each run  would take 90 days and all the 4 runs would take 360 days which is 360 x 24 x 1024 CPU hours or \~ 1 year time. If we are to use the new machine it would take 40 days which is 40 x 24 x 8192 CPU hours to complete the problem, if we use the new machine we would save ~100,000 CPU hours which is a lot of money.  Because all the costs are covered, it would seem resonable to solve the problem of the same size $N$. 
+
+Now if we look at the total CPU hours and if we are to increase the problem size 8 times, that is $8N$, and if we calculate the CPU hours, then, number of CPU hours on the original machine is 8 x 360 x 24 x 1024 for all the four runs which is 70,778,880 CPU hours. Number of CPU hours on the new machine is 8 x 40 x 24 x 8192 for all the four runs which is 62,914,560 CPU hours, thus we save a total of ~ 8,000,000 Hours.
+
+The only question that remains is that of energy efficiency we know that as the frequency increases the power consumption increases in cubical powers. Since the overall power cost and everything is covered by our generous donor, we can therefore at this point say that it is clearly more profitable and time efficient to solve a problem of size $8N$ in around the same time that might take to solve a problem of size $N$. 
 %
+\begin{table}[h!]
+\centering
+\caption{Comparison in terms of CPU hours for all the four runs}
+\label{my-label}
+\scalebox{1}{
+\begin{tabular}{|l|r|r|r|}
+	 \hline
+           & Original Machine       & New Machine              &   \\
+
+ \bf{Size} & \bf{CPU hours}         &\bf{CPU hours}          &   \bf{Saved CPU hours} \\\hline
+     $N$   &    8,847,360			& 7,864,320				   &   983,040	 \\ \hline
+	 $8N$  &    70,778,880			& 62,914,560			   &   7,864,320 \\ \hline
+ 
+\end{tabular}%
+}
+\end{table}
+%
+If we are to use the machine 8 times in a row, we would save a total of 7,864,320. That being said, the entire problem now comes down to parallelism as discussed earlier. We would obviously go for a larger problem if it as more paraellism in it. If there is not so much thread level parallelism in the problem, we would choose the $8N$ sized problem, if the problem is equally scalable. 
+
+If there is no risk of losing the job, we could use the resources as required but the other question is about the responsible use of resources \cite{cdresources}. In order to keep the donor happy, the benefitor might have to be resonable and responsible in order to maintain the good will and for potential future funding.
+
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 3}
