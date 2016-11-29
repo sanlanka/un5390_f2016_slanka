@@ -1,7 +1,7 @@
 // IntegrationPi_p_02.c
 //
-// OpenMP C program compute the value of PI using numerical integration 
-// (trapzeoidal method) and reduction (sum) operation. Compilation/Execution 
+// OpenMP C program to compute the value of PI using numerical integration 
+// (trapzeoidal rule) and reduction (sum) operation. Compilation/Execution 
 // tested in modern hardware (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
@@ -50,8 +50,7 @@ int main(int argc, char **argv) {
   // MASTER thread
   if (thread_id == 0) {
     printf("\n" );
-    printf("  An OpenMP C program to demonstrate parallelization and \n");
-    printf("  master-worker division of labor via PI evaluation using trapezoidal rule.\n\n");
+    printf("  OpenMP C program to compute the value of PI using trapezoidal rule.\n\n");
 
     printf("  Total number of processors available : %d\n", num_procs);
     printf("  Maximum number of usable threads     : %d\n", max_threads);
@@ -78,7 +77,7 @@ int main(int argc, char **argv) {
   { 
     #pragma omp for reduction(+: pi_computed) 
     // Integral evaluation (part #1; for loop)
-    for(i = 1; i < N; i++) {
+    for(i = 1; i <= N - 1; i++) {
       pi_computed = pi_computed + f_x(a + i * h);
     }
   }
@@ -92,7 +91,7 @@ int main(int argc, char **argv) {
     pi_error = fabs(pi - pi_computed);
   }
 
-  // Stop the timer
+  // Stop the timer and count the time
   wall_time = omp_get_wtime() - wall_time;
 
   // MASTER thread

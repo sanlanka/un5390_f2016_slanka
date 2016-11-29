@@ -1,7 +1,7 @@
 // IntegrationPi_p_01.c
 //
-// OpenMP C program compute the value of PI using numerical integration 
-// (trapzeoidal method). Compilation/Execution tested in modern hardware 
+// OpenMP C program to compute the value of PI using numerical integration 
+// (trapzeoidal rule). Compilation/Execution tested in modern hardware 
 // (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
   h = (b - a)/N;
 
   printf("\n" );
-  printf("  C program to compute the value of PI using trapezoidal rule.\n\n");
+  printf("  OpenMP C program to compute the value of PI using trapezoidal rule.\n\n");
 
   printf("  Lower limit of integration          : %f\n", a);
   printf("  Upper limit of integration          : %f\n", b);
@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
 
   #pragma omp parallel for
     // Integral evaluation (part #1; for loop)
-    for(i = 1; i < N; i++) {
+    for(i = 1; i <= N - 1; i++) {
       pi_computed = pi_computed + f_x(a + i * h);
     }
 
@@ -64,10 +64,8 @@ int main(int argc, char **argv) {
   // Compute the error in pi
   pi_error = fabs(pi - pi_computed);
 
-  // Stop the timer
-  end_time = clock();
-
-  // Count the time
+  // Stop the timer and count the time
+  end_time  = clock();
   wall_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
 
   printf("  Known value of PI                   : %16.15f\n",      pi);

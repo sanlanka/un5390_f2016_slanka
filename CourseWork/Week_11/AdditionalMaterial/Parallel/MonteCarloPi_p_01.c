@@ -1,6 +1,6 @@
 // MonteCarloPi_p_01.c
 //
-// OpenMP C program compute the value of PI zation, master-worker work using
+// OpenMP C program to compute the value of PI zation, master-worker work using
 // dart board algorithm (Monte Carlo method). Compilation/Execution tested in 
 // modern hardware (circa 2015) running linux OS with GCC 4.4.7.
 //
@@ -32,9 +32,9 @@ int main(int argc, char **argv) {
   // Start the timer
   start_time = clock();
 
-  printf("\n" );
-  printf("  An OpenMP C program to demonstrate parallelization and \n");
-  printf("  master-worker division of labor via Monte Carlo PI evaluation.\n\n");
+  printf("\n");
+  printf("  OpenMP C program to evaluate PI using Monte Carlo method\n");
+  printf("  (Dart Board algorithm).\n\n");
 
   printf("  Total number of darts thrown        : %d\n", N);
 
@@ -71,10 +71,8 @@ int main(int argc, char **argv) {
   pi_computed = 4.0 * (double) n_circle/(double) N;
   pi_error    = fabs(pi - pi_computed);
 
-  // Stop the timer
-  end_time = clock();
-
-  // Count the time
+  // Stop the timer and count the time
+  end_time  = clock();
   wall_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
 
   printf("  Total number of darts in the circle : %d\n",           n_circle);

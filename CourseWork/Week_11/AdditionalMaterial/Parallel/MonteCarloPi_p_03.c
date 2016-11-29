@@ -53,9 +53,9 @@ int main(int argc, char **argv) {
 
   // MASTER thread
   if (thread_id == 0) {
-    printf("\n" );
-    printf("  An OpenMP C program to demonstrate parallelization and \n");
-    printf("  master-worker division of labor via Monte Carlo PI evaluation.\n\n");
+    printf("\n");
+    printf("  OpenMP C program to evaluate PI using Monte Carlo method\n");
+    printf("  (Dart Board algorithm).\n\n");
 
     printf("  Total number of processors available : %d\n", num_procs);
     printf("  Maximum number of usable threads     : %d\n", max_threads);
@@ -109,7 +109,7 @@ int main(int argc, char **argv) {
     pi_error    = fabs(pi - pi_computed);
   }
 
-  // Stop the timer
+  // Stop the timer and count the time
   wall_time = omp_get_wtime() - wall_time;
 
   // MASTER thread

@@ -1,8 +1,7 @@
 // ArrayManipulation_p_01.c
 //
-// OpenMP C program to compute the value of PI using Monte Carlo dart board 
-// algorithm. Compilation/Execution tested in modern hardware (circa 2015) 
-// running linux OS with GCC 4.4.7.
+// OpenMP C program to manipulate array elements. Compilation/Execution tested
+// in modern hardware (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
 // gcc -Wall -g -lm -fopenmp ArrayManipulation_p_01.c -o ArrayManipulation_p_01.x
@@ -27,7 +26,7 @@ int main(int argc, char **argv) {
   start_time = clock();
 
   printf("\n");
-  printf("  An OpenMP C program to demonstrate array manipulation.\n\n");
+  printf("  OpenMP C program to demonstrate array manipulation.\n\n");
 
   printf("  Size of the array : %d\n", N);
 
@@ -68,10 +67,8 @@ int main(int argc, char **argv) {
     C[i] = A[i] + B[i];
   }
 
-  // Stop the timer
-  end_time = clock();
-
-  // Count the time
+  // Stop the timer and count the time
+  end_time  = clock();
   wall_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
 
   // DEBUG #2

@@ -48,8 +48,8 @@ int main(int argc, char **argv) {
 
   // MASTER thread
   if (thread_id == 0) {
-    printf("\n" );
-    printf("  An OpenMP C program to demonstrate parallelization and \n");
+    printf("\n");
+    printf("  OpenMP C program to demonstrate parallelization and \n");
     printf("  master-worker division of labor via array manipulation.\n\n");
 
     printf("  Total number of processors available : %d\n",   num_procs);
@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
   // printf("  -----------------------------------------\n");
   // DEBUG #2
 
-  // Stop the timer
+  // Stop the timer and count the time 
   wall_time = omp_get_wtime() - wall_time;
 
   // MASTER thread

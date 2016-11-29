@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
   wall_time = omp_get_wtime();
 
   // MASTER thread
-  printf("\n" );
+  printf("\n");
   printf("  Total number of processors available : %d\n",   num_procs);
   printf("  Maximum number of usable threads     : %d\n\n", max_threads);
 
@@ -51,11 +51,11 @@ int main(int argc, char **argv) {
     printf("  Hello, World! from thread %d out of %d\n", thread_id, max_threads);
   }
 
-  // Stop the timer
+  // Stop the timer and count the time
   wall_time = omp_get_wtime() - wall_time;
 
   // MASTER thread
-  printf("\n" );
+  printf("\n");
   printf("  Total time taken : %f seconds\n\n", wall_time);
 
   // Indicate termination

@@ -1,6 +1,6 @@
 // MonteCarloPi_s.c
 //
-// C program compute the value of PI using dart board algorithm (Monte Carlo 
+// C program to compute the value of PI using dart board algorithm (Monte Carlo 
 // method). Compilation/Execution tested in modern hardware (circa 2015) 
 // running linux OS with GCC 4.4.7.
 //
@@ -67,10 +67,8 @@ int main(int argc, char **argv) {
   pi_computed = 4.0 * (double) n_circle/(double) N;
   pi_error    = fabs(pi - pi_computed);
 
-  // Stop the timer
-  end_time = clock();
-
-  // Count the time
+  // Stop the timer and count the time
+  end_time  = clock();
   wall_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
 
   printf("  Total number of darts in the circle : %d\n",           n_circle);

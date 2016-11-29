@@ -24,7 +24,7 @@ int main(int argc, char **argv) {
   // Start the timer
   start_time = clock();
 
-  printf("\n" );
+  printf("\n");
   printf("  C program to demonstrate array manipulation.\n\n");
 
   printf("  Size of the array : %d\n", N);
@@ -65,10 +65,8 @@ int main(int argc, char **argv) {
     C[i] = A[i] + B[i];
   }
 
-  // Stop the timer
-  end_time = clock();
-
-  // Count the time
+  // Stop the timer and count the time
+  end_time  = clock();
   wall_time = (double)(end_time - start_time)/CLOCKS_PER_SEC;
 
   // DEBUG #2
