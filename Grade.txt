@@ -17,7 +17,7 @@
     AP: Attendance 08                 0.50         -      -    0.50
     AP: Attendance 10                 0.50         -      -    0.50
     AP: Attendance 11                 0.50         -      -    0.50
-    AP: Attendance 13                 0.50         -      -    0.00
+    AP: Attendance 13                 0.50         -      -    0.25
     AP: Attendance 14                 0.50         -      -    0.00
     AP: Attendance FW                 0.50         -      -    0.00
     AP: Research marketing I            02         -      -    2.00
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    0.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   44.25
+    Grand total                     100.00         -      -   44.50
   -------------------------------------------------------------------
 
-  Current score and grade :  44.25% (F)
+  Current score and grade :  44.50% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
