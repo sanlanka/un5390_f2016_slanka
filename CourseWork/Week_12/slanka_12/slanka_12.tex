@@ -97,7 +97,7 @@ The only question that remains is that of energy efficiency we know that as the 
 }
 \end{table}
 %
-If we are to use the machine 8 times in a row, we would save a total of 7,864,320. That being said, the entire problem now comes down to parallelism as discussed earlier. We would obviously go for a larger problem if it as more paraellism in it. If there is not so much thread level parallelism in the problem, we would choose the $8N$ sized problem, if the problem is equally scalable. 
+If we are to use the machine 8 times in a row, we would save a total of 7,864,320. That being said, the entire problem now comes down to parallelism as discussed earlier. We would obviously go for a larger problem if it as more paraellism in it. If there is not so much thread level parallelism in the problem, we would choose the $8N$ sized problem, if the problem is equally scalable \cite{PK}. 
 
 If there is no risk of losing the job, we could use the resources as required but the other question is about the responsible use of resources \cite{cdresources}. In order to keep the donor happy, the benefitor might have to be resonable and responsible in order to maintain the good will and for potential future funding.
 
@@ -109,32 +109,57 @@ By intuition as the number of processors that are being used to solve the progra
 
 The for loops in {\tt\textcolor{Green}{matrix\_multiply\_p.m}} is run on number of processors (NPROC) from 1..to..12 using MATLAB's {\tt parfor}. we see that the performance in terms of time of execution increases as processors increase to 2 (and also 3 in case of N=128) but after that the time of execution increases. This is because as the problem size decreases, the time to fork and join the threads dominates the actual times of execution on each processor. 
 
-This tradeoff between time of execution and NPROC should be considered when using more number of processors. It was possible to run the problems only upto NPROC = 12 as the cluster has the NumWorkers property set to allow a maximum of 12 workers. Therefore NPROC = 16 is not taken into account in doing the analysis.
-
-\begin{figure}[!h]
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[height=110mm,width=160mm]{64n128.pdf}
-	\caption{time of executions vs NPROC for N = 64,128\label{overflow}}
+	\includegraphics[height=120mm,width=160mm]{64n128.pdf}
+	\caption{time of executions vs NPROC for N = 64, 128\label{overflow}}
 \end{figure}
 
-We see that after a certain point the time of executions increase as NPROC increases where distribution of work and organising results from each processor takes more time than the actual work done each processor. But as the size of the problem increases we see that the forking and joing time is far less when compared to the time saved by utilising multiple processors and therefore the time of execution significantly decreases. This can be seen clearly when the size of problem is increased to N = 512.
+This tradeoff between time of execution and NPROC should be considered when using more number of processors. It was possible to run the problems only upto NPROC = 12 as the cluster has the NumWorkers property set to allow a maximum of 12 workers. Therefore NPROC = 16 is not taken into account in doing the analysis \cite{PK}.
 
-\begin{figure}[!h]
+The scaled speedups can be plotted as the following. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{64128smat.pdf}
+	\caption{Speedup vs NPROC for N = 64, 128\label{overflow}}
+\end{figure}
+
+We see that after a certain point the time of executions increase as NPROC increases where distribution of work and organising results from each processor takes more time than the actual work done each processor. But as the size of the problem increases we see that the forking and joining time is far less when compared to the time saved by utilising multiple processors and therefore the time of execution significantly decreases.
+\newpage
+We see that as the problem size increases, the speedup starts to become somewhat linear. This can be seen clearly when the size of problem is increased to N = 512.
+
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{512.pdf}
 	\caption{time of executions vs NPROC for N = 512\label{overflow}}
 \end{figure}
-As NPROC increases, we see a significant decrease in the execution times.
-
+The physical reason behind this is the time it takes for an electrical signal to traverse a circuit is limited by the speed of light. This is a hard limit, and there is no known way around it. At gigahertz-clocks, we are approaching this limit. However, we are not there yet. 1 GHz means one nanosecond per clock tick. In that time, light can travel 30cm. At 10 GHz, light can travel 3cm. A single CPU core is about 5mm wide, so we will run into these issues somewhere past 10 GHz.
 \newpage
-This can be further seen when N = 1024. The times of executions significantly decrease with increase in more processors.
-\begin{figure}[!h]
+The scaled speedup starts to be more relevant to the processor count. This can be further seen when N = 1024. The times of executions significantly decrease with increase in more processors.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{512smat.pdf}
+	\caption{Performance vs NPROC for N = 512\label{overflow}}
+\end{figure}
+So, for example, a 1.5 Ghz dual core CPU may offer performance equal to a 2.0 Ghz single core CPU, but with lower power requirement and less heat generation. This is particularly important in tablet and smartphone design. This is because the frequency or the power comsumed by the CPU is directly proportional to the cubical power of the CPU clock frequency.
+\newpage
+As NPROC increases, we see a significant decrease in the execution times. The scaled speedup is almost linear. The larger the the size of the problem, the more linear the speedup becomes as each processor is getting a larger dividend of work that its contributing towards which in turn contributes to the overall performance. 
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{1024.pdf}
 	\caption{time of executions vs NPROC for N = 1024\label{overflow}}
 \end{figure}
 
-Thus, the above examples show that the tradeoff between the number of processors and the size of problem is a very important factor not only for efficiency of the program but also for efficient use of the resources. The program is in the file {\tt\textcolor{Green}{matrix\_multiply\_p.m}}.
+The results can be further increased if we could sum or combine the results on the fly as each processor finishes working on it.
+\newpage
+The scaled speedups tend to be almost linear when the program size becomes 1024.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[height=120mm,width=160mm]{1024smat.pdf}
+	\caption{Performance vs NPROC for N = 1024\label{overflow}}
+\end{figure}
+
+Thus, the above examples show that the tradeoff between the number of processors and the size of problem is a very important factor not only for efficiency of the program but also for efficient use of the resources. The program is in the file {\tt\textcolor{Green}{matrix\_multiply\_p.m}}. As we come up with ways to utilise the processors efficiently or device algorithms that go well with the processors, we can improve the performance on multicores.
 \vfill
 
 \newpage
