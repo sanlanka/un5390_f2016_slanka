@@ -18,7 +18,7 @@
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 1}
 \problem
-The below is the list of the most powerful supercomputers as per the 48th edition of the TOP500 list released in November 2016 \cite{SC16}. The list sees China and the United States competing against each other in the field of supercomputing.
+The below is the list of the top ten powerful supercomputers as per the 48th edition of the TOP500 list released in November 2016 \cite{SC16}. The list shows China and the United States competing against each other in the field of supercomputing.
 \begin{table}[h!]
 \centering
 \caption{Top 10 most powerful supercomputers, SC16, November, 2016}
@@ -55,25 +55,26 @@ The below is the list of the most powerful supercomputers as per the 48th editio
 \end{table}
 %
 \\
-Titan is known for being the first major supercomputer to utilize a hybrid architecture, that utilizes both conventional AMD Opteron CPU's and NVIDIA Tesla GPU accelerators \cite{titan}. It is built out of 18,688 compute nodes and handles a total of 38 GB of memory per node. The machine built by Cray at the US government's Oak Ridge National Laboratory in Tennessee with a cost of about 97 million USD. It will be used for projects such as modelling of the molecular physics of combustion, simulating interactions between electrons and atoms in magnetic materials, simulating nuclear reactions with the aim of reducing nuclear waste, simlating galaxies etc.
+Titan is known for being the first major supercomputer that uses a hybrid architecture, that utilizes both conventional AMD Opteron CPU's and NVIDIA Tesla GPU accelerators \cite{titan}. It is built using 18,688 compute nodes and handles a total of 38 GB of memory per node. The machine built by Cray at the US government's Oak Ridge National Laboratory (ORNL) with a cost of about 97 million USD. It is being used for projects such as modelling of the molecular physics of combustion, simulating interactions between electrons and atoms in magnetic materials, simulating nuclear reactions with the aim of reducing nuclear waste, simulating galaxies etc.
 
-Clocking in at 16.32 sustained petaflops (quadrillion floating point operations per second), Sequoia ranks 4th in the Top500 list of the world's fastest supercomputers released November, 2016. A 96-rack IBM Blue Gene/Q system, Sequoia will enable simulations that explore phenomena at extreme resolutions. It is built out of 98,304 compute nodes; 1.6 million cores; and 1.6 petabytes of memory. Sequoia is dedicated to NNSA's Advanced Simulation and Computing (ASC) program for stewardship of the nation's nuclear weapons stockpile, a joint effort from LLNL, Los Alamos National Laboratory and Sandia National Laboratories. The NNSA/LLNL/IBM partnership has produced six HPC systems that have been ranked among the world's most powerful computers so far \cite{sequoia}. 
+Clocking in at 16.32 sustained PFLOPs (quadrillion floating point operations per second), Sequoia ranks 4th in the Top500 list of the world's fastest supercomputers released November, 2016. A 96-rack IBM Blue Gene/Q system, Sequoia is enabling modellings that explore phenomena at extreme resolutions. It is built out of 98,304 compute nodes, 1.6 million cores, and 1.6 PB of memory. Sequoia is dedicated to National Nuclear Security Adminstration, NNSA's Advanced Simulation and Computing (ASC) program for stewardship of the nation's nuclear weapons stockpile, a joint effort from LLNL and SNL. The NNSA/LLNL/IBM partnership has produced six HPC systems that have been ranked among the world's most powerful computers so far \cite{sequoia}. 
 \newpage
 \phantomsection
 \addcontentsline{toc}{section}{Problem \# 2}
 \problem
-Considering that the current computing infrastructure includes access to a HPC cluster with 1024 processors with 4 GB RAM per processor, 56 Gbps InfiniBand network and 64 TB archival quality storage. The net RAM available is 4096 GB. Considering the new donation towards the research, we now have a 8192 processors and each processor is equipped with a RAM of 16 GB contributing towards a total RAM of 131,072 GB. Assuming that the problem is still equally scable, our net RAM has increased 32 times. 
+The current computing infrastructure includes access to a HPC cluster with 1024 processors with 4 GB RAM per processor, 56 Gbps InfiniBand network and 64 TB archival quality storage. The overall RAM available is 4096 GB. Considering the new donation towards the research, we now have a 8192 processors and each processor is equipped with a RAM of 16 GB contributing towards a total RAM of $\approx$ 131.1 TB. Assuming that the problem is still equally scalable, our total RAM has increased 32 times. Although the calculated RAM is $\approx$ 32 times more, the RAM per core is only 4 GB where as the new machine's RAM per core is 16 GB. So, the increase in per core RAM is almost 4 GB per core. 
 
-Considering the same number of $FLOPS/CPU cycle$ we see that the newly donated machine is $\approx$ 8 times faster than the present machine. If the research problem is equally scalable, we see that, the new machine can therefore finish a whole run or equivalently we can solve a problem of size $8N$ in $t$ considering again that the problem is equally scalable.
+Considering the same number of $\tt{FLOPs/CPU \; cycle}$ we observe that the newly donated machine is $\approx$ 8 times faster than the present machine. If the research problem is equally scalable, we see that, the new machine can therefore finish a whole run or equivalently we can solve a problem of size $8N$ in $t$ considering again that the problem is equally scalable.
 
-The ultimate question to answer is whether to solve a problem of size $N$ in 1/8 th of the time $t$ or size $8N$ in $t$ time or sometime in between. This question is equivalent to whether to go for more speed or more parallelism. If the time $t$ is relatively small and saving anymore time is not considered anymore efficient, there would be no reason to make it any further faster. In general sense if the application includes what we call \i{data parallelism}, it is a simple task to achieve speedup. 
+The ultimate question to answer is whether to solve a problem of size $N$ in 1/8 th of the time $t$ or size $8N$ in $t$ time or sometime in between. This question is equivalent to whether to go for more speed or more parallelism. If the time $t$ is relatively small and saving anymore time is not considered anymore efficient, there would be no reason to make it any further faster. In general sense if the application includes what we call \emph{data parallelism}, it is a simple task to achieve speedup. 
 
-The reasons for whether or not to choose a machine with higher number of processors is purely dependent on :-\\
-1. time $t$ \\
-2. amount of parallelism \\
-3. cost \\
-4. power 
-
+The reasons for whether or not to choose a machine with higher number of processors is purely dependent on :-
+\begin{enumerate}
+\item time $t$ 
+\item amount of parallelism 
+\item cost 
+\item power
+\end{enumerate}
 If we have increased performance in terms of time to solve the problem, it might seem reasonable at first to opt for a machine with higher capabilties but a better time is related to the amount of parallelism in the application. Here we consider that the scalabilty is 100\%, so the performance would increase well but $t$ is given to be 90 days so each run  would take 90 days and all the 4 runs would take 360 days which is 360 x 24 x 1024 CPU hours or $\approx$ 1 year time. If we are to use the new machine it would take 40 days which is 40 x 24 x 8192 CPU hours to complete the problem, if we use the new machine we would save ~100,000 CPU hours which is a lot of money.  Because all the costs are covered, it would seem resonable to solve the problem of the same size $N$. 
 
 Now if we look at the total CPU hours and if we are to increase the problem size 8 times, that is $8N$, and if we calculate the CPU hours, then, number of CPU hours on the original machine is 8 x 360 x 24 x 1024 for all the four runs which is 70,778,880 CPU hours. Number of CPU hours on the new machine is 8 x 40 x 24 x 8192 for all the four runs which is 62,914,560 CPU hours, thus we save a total of $\approx$ 8,000,000 Hours.
@@ -97,7 +98,7 @@ The only question that remains is that of energy efficiency we know that as the 
 }
 \end{table}
 %
-If we are to use the machine 8 times in a row, we would save a total of 7,864,320. That being said, the entire problem now comes down to parallelism as discussed earlier. We would obviously go for a larger problem if it as more paraellism in it. If there is not so much thread level parallelism in the problem, we would choose the $8N$ sized problem, if the problem is equally scalable \cite{PK}. 
+If we are to use the machine 8 times in a row, we would save a total of 7,864,320. That being said, the entire problem now comes down to parallelism as discussed earlier. We would obviously go for a larger problem if it has more paraellism in it. If there is not so much thread level parallelism in the problem, we would choose the $8N$ sized problem, if the problem is equally scalable \cite{PK}. 
 
 If there is no risk of losing the job, we could use the resources as required but the other question is about the responsible use of resources \cite{cdresources}. In order to keep the donor happy, the benefitor might have to be resonable and responsible in order to maintain the good will and for potential future funding.
 
@@ -107,21 +108,21 @@ If there is no risk of losing the job, we could use the resources as required bu
 \problem
 By intuition as the number of processors that are being used to solve the program are increased, the time of execution should decrease eventually. This is true but if the problem is too small for a single processor there is only an increased lag when we run them on 2 (or more) processors. Therefore, the time of execution is not always inversely propotional to the number of processors that the problem is solved upon.
 
-The for loops in {\tt\textcolor{Green}{matrix\_multiply\_p.m}} is run on number of processors (NPROC) from 1..to..12 using MATLAB's {\tt parfor}. we see that the performance in terms of time of execution increases as processors increase to 2 (and also 3 in case of N=128) but after that the time of execution increases. This is because as the problem size decreases, the time to fork and join the threads dominates the actual times of execution on each processor. 
+The for loops in {\tt\textcolor{Green}{matrix\_multiply\_p.m}} is run on number of processors (NPROC) from 1..to..12 using MATLAB's {\tt parfor}. we see that the performance in terms of time of execution increases as processors increase to 2 (and also 3 in case of N = 128) but after that the time of execution increases. This is because as the problem size decreases, the time to fork and join the threads dominates the actual times of execution on each processor. 
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{64n128.pdf}
-	\caption{time of executions vs NPROC for N = 64, 128\label{overflow}}
+	\caption{Times of execution vs NPROC for N = 64 and 128\label{overflow}}
 \end{figure}
 
-This tradeoff between time of execution and NPROC should be considered when using more number of processors. It was possible to run the problems only upto NPROC = 12 as the cluster has the NumWorkers property set to allow a maximum of 12 workers. Therefore NPROC = 16 is not taken into account in doing the analysis \cite{PK}.
+This tradeoff between time of execution and NPROC should be considered when using more number of processors. It was possible to run the problems only upto NPROC = 8 as the cluster has the {\tt{NumWorkers}} property set to allow a maximum of 12 workers. Therefore NPROC = 16 is not taken into account in doing the analysis \cite{PK}.
 
 The scaled speedups can be plotted as the following. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{64128smat.pdf}
-	\caption{Speedup vs NPROC for N = 64, 128\label{overflow}}
+	\caption{Speedup vs NPROC for N = 64 and 128\label{overflow}}
 \end{figure}
 
 We see that after a certain point the time of executions increase as NPROC increases where distribution of work and organising results from each processor takes more time than the actual work done each processor. But as the size of the problem increases we see that the forking and joining time is far less when compared to the time saved by utilising multiple processors and therefore the time of execution significantly decreases.
@@ -131,7 +132,7 @@ We see that as the problem size increases, the speedup starts to become somewhat
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{512.pdf}
-	\caption{time of executions vs NPROC for N = 512\label{overflow}}
+	\caption{Times of execution vs NPROC for N = 512\label{overflow}}
 \end{figure}
 The physical reason behind this is the time it takes for an electrical signal to traverse a circuit is limited by the speed of light. This is a hard limit, and there is no known way around it. At gigahertz-clocks, we are approaching this limit. However, we are not there yet. 1 GHz means one nanosecond per clock tick. In that time, light can travel 30cm. At 10 GHz, light can travel 3cm. A single CPU core is about 5mm wide, so we will run into these issues somewhere past 10 GHz.
 \newpage
@@ -139,7 +140,7 @@ The scaled speedup starts to be more relevant to the processor count. This can b
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{512smat.pdf}
-	\caption{Performance vs NPROC for N = 512\label{overflow}}
+	\caption{Speedup vs NPROC for N = 512\label{overflow}}
 \end{figure}
 So, for example, a 1.5 Ghz dual core CPU may offer performance equal to a 2.0 Ghz single core CPU, but with lower power requirement and less heat generation. This is particularly important in tablet and smartphone design. This is because the frequency or the power comsumed by the CPU is directly proportional to the cubical power of the CPU clock frequency.
 \newpage
@@ -147,7 +148,7 @@ As NPROC increases, we see a significant decrease in the execution times. The sc
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=120mm,width=160mm]{1024.pdf}
-	\caption{time of executions vs NPROC for N = 1024\label{overflow}}
+	\caption{Times of execution vs NPROC for N = 1024\label{overflow}}
 \end{figure}
 
 The results can be further increased if we could sum or combine the results on the fly as each processor finishes working on it.
@@ -155,8 +156,8 @@ The results can be further increased if we could sum or combine the results on t
 The scaled speedups tend to be almost linear when the program size becomes 1024.
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[height=120mm,width=160mm]{1024smat.pdf}
-	\caption{Performance vs NPROC for N = 1024\label{overflow}}
+	\includegraphics[height=120mm,width=160mm]{1024512smat.pdf}
+	\caption{Speedup vs NPROC for N = 512 and 1024\label{overflow}}
 \end{figure}
 
 Thus, the above examples show that the tradeoff between the number of processors and the size of problem is a very important factor not only for efficiency of the program but also for efficient use of the resources. The program is in the file {\tt\textcolor{Green}{matrix\_multiply\_p.m}}. As we come up with ways to utilise the processors efficiently or device algorithms that go well with the processors, we can improve the performance on multicores.
