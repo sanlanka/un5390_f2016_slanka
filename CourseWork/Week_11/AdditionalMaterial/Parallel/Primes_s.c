@@ -54,8 +54,8 @@ int main(int argc, char **argv) {
   // If the number is prime, then retain P[i] = 1.
   // If not, then set P[i] = 0
   for (i = 2; i * i <= M; i++) {
-    for (j = i * i; j <= M; j = j + i) {
-      if (P[j] == 1) {
+    if (P[i] == 1) {
+      for (j = i * i; j <= M; j = j + i) {
         P[j] = 0;
       }
     }

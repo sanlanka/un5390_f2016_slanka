@@ -44,6 +44,8 @@ int main(int argc, char **argv) {
   printf("\n" );
   printf("  OpenMP C program to count the number of primes between\n");
   printf("  2 and pow(10, %d) using using the sieve of Eratosthenes.\n\n", N);
+  printf("  Total number of processors available          : %d\n",   num_procs);
+  printf("  Maximum number of usable threads              : %d\n",   max_threads);
 
   // Potential for improvement
   // #1. Check if the executable has been called with an appropriate 
@@ -65,10 +67,10 @@ int main(int argc, char **argv) {
   // If the number is prime, then retain P[i] = 1.
   // If not, then set P[i] = 0
   for (i = 2; i * i <= M; i++) {
-    // 'pragma omp parallel for' will not work for the outer loop
-    #pragma omp parallel for
-    for (j = i * i; j <= M; j = j + i) {
-      if (P[j] == 1) {
+    if (P[i] == 1) {
+      // 'pragma omp parallel for' did not work for the outer loop
+      #pragma omp parallel for
+      for (j = i * i; j <= M; j = j + i) {
         P[j] = 0;
       }
     }
