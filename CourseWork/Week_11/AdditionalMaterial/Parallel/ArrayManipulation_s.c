@@ -6,7 +6,7 @@
 //
 // Compilation and execution
 // gcc -Wall -g -pg -lm ArrayManipulation_s.c -o ArrayManipulation_s.x
-// ./ArrayManipulation_s.x
+// $(pwd)/ArrayManipulation_s.x
 
 // Headers and functions
 #include "functions.h"

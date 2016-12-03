@@ -1,4 +1,4 @@
-// matrix_multiplication_serial.c
+// MatrixMultiplication_s.c
 //
 // C program to perform matrix multiplication. Checks the order of involved 
 // matrices before proceeding ahead with multiplication. Compilation/Execution 
@@ -10,8 +10,8 @@
 // C[NRAxNCB]
 //
 // Compilation and execution:
-// gcc -Wall -g -pg -lm matrix_multiplication_serial.c -o matrix_multiplication_serial.x
-// ./matrix_multiplication_omp_02.x NROWS_A NCOLS_A NROWS_B NCOLS_B
+// gcc -Wall -g -pg -lm MatrixMultiplication_s.c -o MatrixMultiplication_s.x
+// $(pwd)/MatrixMltiplication_s.x NROWS_A NCOLS_A NROWS_B NCOLS_B
 
 // Headers and functions
 #include "functions.h"

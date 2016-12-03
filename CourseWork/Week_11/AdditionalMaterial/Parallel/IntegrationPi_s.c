@@ -6,7 +6,7 @@
 //
 // Compilation and execution
 // gcc -Wall -g -pg -lm IntegrationPi_s.c -o IntegrationPi_s.x
-// ./IntegrationPi_s.x
+// $(pwd)/IntegrationPi_s.x
 
 // Headers and functions
 #include "functions.h"

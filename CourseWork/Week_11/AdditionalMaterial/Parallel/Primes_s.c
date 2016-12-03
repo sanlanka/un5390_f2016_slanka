@@ -9,7 +9,7 @@
 //
 // Compilation and execution
 // gcc -Wall -g -pg -lm Primes_s.c -o Primes_s.x
-// ./Primes_s.x
+// $(omp)/Primes_s.x
 
 // Headers and functions
 #include "functions.h"

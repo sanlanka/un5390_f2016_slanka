@@ -6,7 +6,7 @@
 //
 // Compilation and execution
 // gcc -Wall -g -pg -lm MonteCarloPi_s.c -o MonteCarloPi_s.x
-// ./MonteCarloPi_s.x
+// $(omp)/MonteCarloPi_s.x
 
 // Headers and functions
 #include "functions.h"
