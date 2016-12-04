@@ -213,7 +213,7 @@ echo >> ${UN5390_W11}/${TODAY}-mpich-${MPICH_VERSION}_timing-information.txt
 cd ${UN5390_W11}
 git pull
 git add ${TODAY}-mpich-*.txt
-git commit -m "MPICH ${MPICH_VERSION} compilation using ${COMPILER} ${COMPILER_VERSION})"
+git commit -m "MPICH ${MPICH_VERSION} compilation using ${COMPILER} ${COMPILER_VERSION}"
 git push origin master
 
 # Below commands are not related to MPICH installation but required for
