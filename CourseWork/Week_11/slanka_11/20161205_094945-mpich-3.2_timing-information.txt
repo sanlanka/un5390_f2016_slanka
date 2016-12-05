@@ -1,0 +1,6 @@
+#
+# MPICH 3.2 (w/ gcc 4.8.5) timing information
+
+  Start time : Mon, 05 Dec 2016 09:49:45 -0500 (1480949385)
+  End time   : Mon, 05 Dec 2016 10:07:07 -0500 (1480950427)
+

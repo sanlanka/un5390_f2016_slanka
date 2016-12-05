@@ -1,0 +1,57 @@
+Making installcheck in /tmp/slanka/mpich/build/src/mpl
+make[1]: Entering directory `/tmp/slanka/mpich/build/src/mpl'
+make[1]: Nothing to be done for `installcheck'.
+make[1]: Leaving directory `/tmp/slanka/mpich/build/src/mpl'
+Making installcheck in /tmp/slanka/mpich/build/src/openpa
+make[1]: Entering directory `/tmp/slanka/mpich/build/src/openpa'
+Making installcheck in src
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/openpa/src'
+make[2]: Nothing to be done for `installcheck'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/openpa/src'
+Making installcheck in test
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/openpa/test'
+make[2]: Nothing to be done for `installcheck'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/openpa/test'
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/openpa'
+make[2]: Nothing to be done for `installcheck-am'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/openpa'
+make[1]: Leaving directory `/tmp/slanka/mpich/build/src/openpa'
+Making installcheck in src/mpi/romio
+make[1]: Entering directory `/tmp/slanka/mpich/build/src/mpi/romio'
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/mpi/romio'
+make[2]: Nothing to be done for `installcheck-am'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/mpi/romio'
+make[1]: Leaving directory `/tmp/slanka/mpich/build/src/mpi/romio'
+Making installcheck in src/pm/hydra
+make[1]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra'
+Making installcheck in ../../mpl
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/mpl'
+make[2]: Nothing to be done for `installcheck'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/mpl'
+Making installcheck in tools/topo/hwloc/hwloc
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making installcheck in src
+make[3]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make[3]: Nothing to be done for `installcheck'.
+make[3]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+Making installcheck in include
+make[3]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[3]: Nothing to be done for `installcheck'.
+make[3]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[3]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[3]: Nothing to be done for `installcheck-am'.
+make[3]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making installcheck in .
+make[2]: Entering directory `/tmp/slanka/mpich/build/src/pm/hydra'
+make[2]: Nothing to be done for `installcheck-am'.
+make[2]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra'
+make[1]: Leaving directory `/tmp/slanka/mpich/build/src/pm/hydra'
+Making installcheck in .
+make[1]: Entering directory `/tmp/slanka/mpich/build'
+make[1]: Nothing to be done for `installcheck-am'.
+make[1]: Leaving directory `/tmp/slanka/mpich/build'
+Making installcheck in examples
+make[1]: Entering directory `/tmp/slanka/mpich/build/examples'
+make[1]: Nothing to be done for `installcheck'.
+make[1]: Leaving directory `/tmp/slanka/mpich/build/examples'
