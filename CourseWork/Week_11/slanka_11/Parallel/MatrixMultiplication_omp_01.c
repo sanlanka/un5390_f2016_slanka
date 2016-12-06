@@ -1,8 +1,9 @@
-// MatrixMultiplication_s.c
+// MatrixMultiplication_omp_01.c
 //
-// C program to perform matrix multiplication. Checks the order of involved 
-// matrices before proceeding ahead with multiplication. Compilation/Execution 
-// tested in modern hardware (circa 2015) running linux OS with GCC 4.4.7.
+// OpenMP C program to perform matrix multiplication. Checks the order of 
+// involved matrices before proceeding ahead with multiplication. 
+// Compilation/Execution tested in modern hardware (circa 2015) running linux 
+// OS with GCC 4.4.7.
 // 
 // Matrix elements generated within the program
 // A[NRAxNCA]
@@ -10,12 +11,14 @@
 // C[NRAxNCB]
 //
 // Compilation and execution:
-// gcc -Wall -g -pg -lm MatrixMultiplication_s.c -o MatrixMultiplication_s.x
-// $(pwd)/MatrixMltiplication_s.x NROWS_A NCOLS_A NROWS_B NCOLS_B
+// gcc -Wall -g -lm -fopenmp MatrixMultiplication_omp_01.c -o MatrixMultiplication_omp_01.x
+// OMP_NUM_THREADS=2 (or 4 or 8 or 16, as appropriate)
+// $(pwd)/MatrixMultiplication_omp_01.x NROWS_A NCOLS_A NROWS_B NCOLS_B
 
 // Headers and functions
+#define PARALLEL_OMP   // Conditional inclusion of omp.h in functions.h
 #include "functions.h"
-#define NUM_ARGS 5   // Number of required arguments
+#define NUM_ARGS 5     // Number of required arguments
 
 // main()
 int main(int argc, char **argv) {
@@ -52,7 +55,7 @@ int main(int argc, char **argv) {
 
   // Problem statement
   printf("\n" );
-  printf("  C program to perform matrix multiplication.\n\n");
+  printf("  OpenMP C program to perform matrix multiplication.\n\n");
 
   printf("  Number of rows in A (and C)          : %d\n", NRA);
   printf("  Number of columns in A               : %d\n", NCA);
@@ -96,12 +99,16 @@ int main(int argc, char **argv) {
   }
 
   // Matrix multiplication
-  for (i = 0; i < NRA; i++) {
-    for (j = 0; j < NCB; j++) {
-      for (k = 0; k < NCA; k++) {
-        C[i][j] = C[i][j] + (A[i][k] * B[k][j]);
+  #pragma omp parallel
+  {
+    #pragma omp for
+      for (i = 0; i < NRA; i++) {
+        for (j = 0; j < NCB; j++) {
+          for (k = 0; k < NCA; k++) {
+            C[i][j] = C[i][j] + (A[i][k] * B[k][j]);
+          }
+        }
       }
-    }
   }
 
   // Stop the timer

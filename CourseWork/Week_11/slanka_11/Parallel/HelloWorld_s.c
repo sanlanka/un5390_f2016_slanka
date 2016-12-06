@@ -5,7 +5,7 @@
 //
 // Compilation and execution
 // gcc -Wall -g -pg -lm HelloWorld_s.c -o HelloWorld_s.x
-// ./HelloWorld_s.x
+// $(pwd)/HelloWorld_s.x
 
 // Headers and functions
 #include "functions.h"

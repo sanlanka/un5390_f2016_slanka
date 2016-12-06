@@ -1,14 +1,15 @@
-// ArrayManipulation_s.c
+// ArrayManipulation_omp_01.c
 //
-// C program to compute the value of PI using Monte Carlo dart board algorithm.
-// Compilation/Execution tested in modern hardware (circa 2015) running linux
-// OS with GCC 4.4.7.
+// OpenMP C program to manipulate array elements. Compilation/Execution tested
+// in modern hardware (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
-// gcc -Wall -g -pg -lm ArrayManipulation_s.c -o ArrayManipulation_s.x
-// $(pwd)/ArrayManipulation_s.x
+// gcc -Wall -g -lm -fopenmp ArrayManipulation_omp_01.c -o ArrayManipulation_omp_01.x
+// OMP_NUM_THREADS=2 (or 4 or 8 or 16, as appropriate)
+// $(pwd)/ArrayManipulation_omp_01.x
 
 // Headers and functions
+#define PARALLEL_OMP   // Conditional inclusion of omp.h in functions.h
 #include "functions.h"
 
 // main()
@@ -18,14 +19,14 @@ int main(int argc, char **argv) {
   int N = pow(2, 30);           // Size of the array
   int i;                        // Running index
   double A[N], B[N], C[N];      // Three 1D arrays of size N
-  double wall_time;             // Wall time
+  double wall_time = 0.00;      // Wall time
   clock_t start_time, end_time; // Start and end time
 
   // Start the timer
   start_time = clock();
 
   printf("\n");
-  printf("  C program to demonstrate array manipulation.\n\n");
+  printf("  OpenMP C program to demonstrate array manipulation.\n\n");
 
   printf("  Size of the array : %d\n", N);
 
@@ -61,6 +62,7 @@ int main(int argc, char **argv) {
   // DEBUG #1
 
   // Manipulate the array
+  #pragma omp parallel for default(shared), private(i)
   for (i = 0; i < N; i++) {
     C[i] = A[i] + B[i];
   }

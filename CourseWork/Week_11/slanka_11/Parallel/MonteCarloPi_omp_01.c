@@ -1,14 +1,16 @@
-// MonteCarloPi_s.c
+// MonteCarloPi_omp_01.c
 //
-// C program to compute the value of PI using dart board algorithm (Monte Carlo 
-// method). Compilation/Execution tested in modern hardware (circa 2015) 
-// running linux OS with GCC 4.4.7.
+// OpenMP C program to compute the value of PI zation, master-worker work using
+// dart board algorithm (Monte Carlo method). Compilation/Execution tested in 
+// modern hardware (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
-// gcc -Wall -g -pg -lm MonteCarloPi_s.c -o MonteCarloPi_s.x
-// $(omp)/MonteCarloPi_s.x
+// gcc -Wall -g -lm -fopenmp MonteCarloPi_omp_01.c -o MonteCarloPi_omp_01.x
+// OMP_NUM_THREADS=2 (or 4 or 8 or 16, as appropriate)
+// $(pwd)/MonteCarloPi_omp_01.x
 
 // Headers and functions
+#define PARALLEL_OMP   // Conditional inclusion of omp.h in functions.h
 #include "functions.h"
 
 // main()
@@ -30,8 +32,9 @@ int main(int argc, char **argv) {
   // Start the timer
   start_time = clock();
 
-  printf("\n" );
-  printf("  C program to compute the value of PI via Monte Carlo method.\n\n");
+  printf("\n");
+  printf("  OpenMP C program to evaluate PI using Monte Carlo method\n");
+  printf("  (Dart Board algorithm).\n\n");
 
   printf("  Total number of darts thrown        : %d\n", N);
 
@@ -50,6 +53,7 @@ int main(int argc, char **argv) {
   gettimeofday(&t1, NULL);
   srand(t1.tv_usec * t1.tv_sec);
 
+  #pragma omp parallel for default(shared), private(i), reduction(+:n_circle)
   // Throw darts
   for (i = 0; i < N; i++) {
     // Generate random numbers x and y between -R and R

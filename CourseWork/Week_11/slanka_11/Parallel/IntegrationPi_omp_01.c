@@ -1,14 +1,16 @@
-// IntegrationPi_s.c
+// IntegrationPi_omp_01.c
 //
-// C program to compute the value of PI using numerical integration (trapzeoidal
-// method). Compilation/Execution tested in modern hardware (circa 2015) 
-// running linux OS with GCC 4.4.7.
+// OpenMP C program to compute the value of PI using numerical integration 
+// (trapzeoidal rule). Compilation/Execution tested in modern hardware 
+// (circa 2015) running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
-// gcc -Wall -g -pg -lm IntegrationPi_s.c -o IntegrationPi_s.x
-// $(pwd)/IntegrationPi_s.x
+// gcc -Wall -g -lm -fopenmp IntegrationPi_omp_01.c -o IntegrationPi_omp_01.x
+// OMP_NUM_THREADS=2 (or 4 or 8 or 16, as appropriate)
+// $(pwd)/IntegrationPi_omp_01.x
 
 // Headers and functions
+#define PARALLEL_OMP   // Conditional inclusion of omp.h in functions.h
 #include "functions.h"
 
 // main()
@@ -32,8 +34,8 @@ int main(int argc, char **argv) {
   // Width of the interval
   h = (b - a)/N;
 
-  printf("\n");
-  printf("  C program to compute the value of PI using trapezoidal rule.\n\n");
+  printf("\n" );
+  printf("  OpenMP C program to compute the value of PI using trapezoidal rule.\n\n");
 
   printf("  Lower limit of integration          : %f\n", a);
   printf("  Upper limit of integration          : %f\n", b);
@@ -50,10 +52,11 @@ int main(int argc, char **argv) {
   // #4. If writing to and/or reading from a file, check file/folder 
   //     permissions
 
-  // Integral evaluation (part #1; for loop)
-  for(i = 1; i <= N - 1; i++) {
-    pi_computed = pi_computed + f_x(a + i * h);
-  }
+  #pragma omp parallel for
+    // Integral evaluation (part #1; for loop)
+    for(i = 1; i <= N - 1; i++) {
+      pi_computed = pi_computed + f_x(a + i * h);
+    }
 
   // Integral evaluation (part #2)
   pi_computed = 4.00 * h * (pi_computed + (0.50 * (f_x(a) + f_x(b))));

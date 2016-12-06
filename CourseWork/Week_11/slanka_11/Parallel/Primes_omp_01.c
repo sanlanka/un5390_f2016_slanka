@@ -1,24 +1,26 @@
-// Primes_s.c
+// Primes_omp_01.c
 //
-// C program to compute the number of primes between 2 and M using the sieve
-// of Eratosthenes -- a simple, ancient algorithm for finding all prime numbers
-// up to any given limit. It does so by iteratively marking as composite (i.e.,
-// not prime) the multiples of each prime, starting with the multiples of 2.
-// Compilation/Execution tested in modern hardware (circa 2015) running linux
-// OS with GCC 4.4.7.
+// OpenMP C program to compute the number of primes between 2 and M using the
+// sieve of Eratosthenes -- a simple, ancient algorithm for finding all prime
+// numbers up to any given limit. It does so by iteratively marking as
+// composite (i.e., not prime) the multiples of each prime, starting with the
+// multiples of 2. Compilation/Execution tested in modern hardware (circa 2015)
+// running linux OS with GCC 4.4.7.
 //
 // Compilation and execution
-// gcc -Wall -g -pg -lm Primes_s.c -o Primes_s.x
-// $(omp)/Primes_s.x
+// gcc -Wall -g -lm -fopenmp Primes_omp_01.c -o Primes_omp_01.x
+// OMP_NUM_THREADS=2 (or 4 or 8 or 16, as appropriate)
+// $(omp)/Primes_omp_01.x
 
 // Headers and functions
+#define PARALLEL_OMP   // Conditional inclusion of omp.h in functions.h
 #include "functions.h"
 
 // main()
 int main(int argc, char **argv) {
 
   // Variable declaration
-  int N = 1;                    // Used to get pow(10, N)
+  int N = 1;       ;            // Used to get pow(10, N)
   long long int M = pow(10, N); // Primes from 2 to M
   long long int i, j;           // Running indices
   long long int primes = 0;     // Number of primes between 2 and M
@@ -30,9 +32,9 @@ int main(int argc, char **argv) {
   start_time = clock();
 
   // Problem statement
-  printf("\n" );
-  printf("  C program to compute the number of primes between\n");
-  printf("  2 and pow(10, %d) using the sieve of Eratosthenes.\n\n", N);
+  printf("\n");
+  printf("  OpenMP C program to count the number of primes between\n");
+  printf("  2 and pow(10, %d) using using the sieve of Eratosthenes.\n\n", N);
 
   // Potential for improvement
   // #1. Check if the executable has been called with an appropriate 
@@ -53,6 +55,7 @@ int main(int argc, char **argv) {
   // Sieve of Eratosthenes
   // If the number is prime, then retain P[i] = 1.
   // If not, then set P[i] = 0
+  #pragma omp parallel for
   for (i = 2; i * i <= M; i++) {
     if (P[i] == 1) {
       for (j = i * i; j <= M; j = j + i) {
