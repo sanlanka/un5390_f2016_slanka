@@ -7,7 +7,7 @@
 #$ -m abes
 #$ -q all.q@compute-0-0.local
 #$ -pe mpich 4
-#fj;af;a
+
 echo
 echo "  User        : ${USER}"
 echo "  Date/Time   : $(date -R)"
