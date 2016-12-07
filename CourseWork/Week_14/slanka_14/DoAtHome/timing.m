@@ -3,6 +3,9 @@
 %Do at home exercises
 %Sandeep Lanka
 % Tue 12/5, 1:14PM
+
+%MATLAB function to calculate timings for different Math operations 
+% such as Addition, subtraction, multiplication etc.
 %Execution:
 %To Run Open in Matlab and Click the Run Icon or 
 %type "run 'timings.m'" in the Command Window. 
@@ -10,7 +13,7 @@
 %Matlab's present directory is changed to the 'timings' directory
 
 %The answers are different for integers and non integers.
-%but the default tyype in MATLAB is a double which shows no difference
+%but the default type in MATLAB is a double which shows no difference
 function [outputs] = timings(A,B)
 format long
 outputs = zeros(1,5);

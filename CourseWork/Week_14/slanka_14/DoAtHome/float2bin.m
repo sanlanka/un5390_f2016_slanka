@@ -3,6 +3,9 @@
 %Do at home exercises
 %Sandeep Lanka
 % Tue 12/5, 1:14PM
+
+%MATLAB function to convert a Floating point Number into a Binary Mantissa
+
 %Execution:
 %To Run Open in Matlab and Click the Run Icon or 
 %type "run 'float2bin.m'" in the Command Window and provide the inputs. 

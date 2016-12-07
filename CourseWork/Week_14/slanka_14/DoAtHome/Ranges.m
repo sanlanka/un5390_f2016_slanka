@@ -3,6 +3,9 @@
 %Do at home exercises
 %Sandeep Lanka
 % Tue 12/4, 2:00PM
+
+%MATLAB function to calcualte the Range of...
+%...a of 16, 32 ,64 bit signed and unsigned systems
 %Execution:
 %To Run Open in Matlab and Click the Run Icon or 
 %type "run 'Ranges.m'" in the Command Window. 
