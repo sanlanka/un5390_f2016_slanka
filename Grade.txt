@@ -19,10 +19,10 @@
     AP: Attendance 11                 0.50         -      -    0.50
     AP: Attendance 13                 0.50         -      -    0.50
     AP: Attendance 14                 0.50         -      -    0.50
-    AP: Attendance FW                 0.50         -      -    0.00
+    AP: Attendance FW                 0.50         -      -    0.50
     AP: Research marketing I            02         -      -    2.00
     AP: Research marketing II           02         -      -    2.00
-    AP: Research marketing III          02         -      -    0.00
+    AP: Research marketing III          02         -      -    2.00
     AP: PB&J sandwich recipe            02         -      -    2.00
     AP: Problem-solving skills          02         -      -    3.00
     AP: Doing a little more             09         -      -    1.00
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    1.00
     Project Work                        20         -      -    0.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   48.25
+    Grand total                     100.00         -      -   50.75
   -------------------------------------------------------------------
 
-  Current score and grade :  48.25% (F)
+  Current score and grade :  50.75% (F)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
