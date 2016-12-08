@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
 
     // Problem statement
     printf("\n" );
-    printf("  OpenMP C program to perform matrix multiplication.\n\n")
+    printf("  OpenMP C program to perform matrix multiplication.\n\n");
 
     printf("  Total number of processors available : %d\n", num_procs);
     printf("  Maximum number of usable threads     : %d\n", max_threads);

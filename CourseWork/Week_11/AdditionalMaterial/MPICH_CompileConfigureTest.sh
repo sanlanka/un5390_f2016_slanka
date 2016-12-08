@@ -181,10 +181,10 @@ fi
 cat <<EOF >> ${HOME}/.bash_${USER}
 
 # MPICH ${MPICH_VERSION} (w/ ${COMPILER} ${COMPILER_VERSION}) settings
-MPICH="\${HOME}/apps/mpich/${MPICH_VERSION}/${COMPILER}/${COMPILER_VERSION}"
-PATH="\${PATH}:\${MPICH}/bin"
-LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:\${MPICH}/lib"
-MANPATH="\${MANPATH}:\${MPICH}/share/man"
+export MPICH="\${HOME}/apps/mpich/${MPICH_VERSION}/${COMPILER}/${COMPILER_VERSION}"
+export PATH="\${PATH}:\${MPICH}/bin"
+export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:\${MPICH}/lib"
+export MANPATH="\${MANPATH}:\${MPICH}/share/man"
 EOF
 
 # Source ${HOME}/.bashrc

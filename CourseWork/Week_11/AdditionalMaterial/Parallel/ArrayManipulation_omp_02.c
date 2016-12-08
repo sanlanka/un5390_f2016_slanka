@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
 
   // Parallel region
   // Each thread has its own copy of variables
-  #pragma omp parallel shared(j, max_threads, N, array_chunk) private(thread_id, i, array_llimit, array_ulimit) 
+  #pragma omp parallel shared(max_threads, N, array_chunk) private(thread_id, i, array_llimit, array_ulimit) 
   {
     // Thread ID
     thread_id = omp_get_thread_num();
