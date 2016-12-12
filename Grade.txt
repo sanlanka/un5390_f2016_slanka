@@ -25,7 +25,7 @@
     AP: Research marketing III          02         -      -    2.00
     AP: PB&J sandwich recipe            02         -      -    2.00
     AP: Problem-solving skills          02         -      -    2.00
-    AP: Doing a little more             09         -      -    3.00
+    AP: Doing a little more             09         -      -    6.00
     Project Status Report 10            01         -      -    1.00
     Project Status Report 11            01         -      -    1.00
     Project Status Report 12            01         -      -    1.00
@@ -33,10 +33,10 @@
     Project Status Report 14            01         -      -    1.00
     Project Work                        20         -      -   15.00
   -------------------------------------------------------------------
-    Grand total                     100.00         -      -   86.75
+    Grand total                     100.00         -      -   89.75
   -------------------------------------------------------------------
 
-  Current score and grade :  86.75% (B)
+  Current score and grade :  89.75% (AB)
 
   Final grade = 50% Assignments + 
                 25% Active Participation +
