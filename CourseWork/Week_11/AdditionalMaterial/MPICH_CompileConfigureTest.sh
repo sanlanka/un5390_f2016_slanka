@@ -216,7 +216,28 @@ echo >> ${UN5390_W11}/${TODAY}-mpich-${MPICH_VERSION}_timing-information.txt
 
 # Add necessary files to the repository and commit changes
 cd ${UN5390_W11}
-git pull
+# Push to GitHub iff the network connection exits.
+# Send PING_COUNT packets and extract the line that contains the string
+# "packets transmitted". Subsequently, extract the number of packets sent
+# (or transmitted) and number of packets received.
+TESTING=$(${PING_CMD} ${REMOTE_SERVER} | grep "packets transmitted")
+PACKETS_SENT=$(echo ${TESTING} | awk '{ print $1 }')
+PACKETS_RECD=$(echo ${TESTING} | awk '{ print $4 }')
+if [ ${PACKETS_SENT} != ${PACKETS_RECD} ]
+then
+  echo
+  echo "  ${REMOTE_SERVER} is unreachable."
+  echo "  Manually run "git push origin master" at a later time".
+  echo "  Exiting the script."
+  echo
+  exit ${EXIT_CODE_PING}
+else
+  echo
+  echo "  ${REMOTE_SERVER} is reachable."
+  echo
+  git pull
+  echo
+fi
 git add ${TODAY}-mpich-*.txt
 git commit -m "MPICH ${MPICH_VERSION} compilation using ${COMPILER} ${COMPILER_VERSION}"
 
